@@ -1,3 +1,60 @@
 body {
-  font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  background: #0b1f33;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.subtitle {
+  max-width: 700px;
+  margin: 20px auto 0;
+  font-size: 1.1rem;
+}
+
+/* SECCIONES */
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section.gray {
+  background: #f4f6f8;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* TABLA */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+.comparison-table th {
+  background: #eaeaea;
+}
+
+/* FOOTER */
+.footer {
+  background: #0b1f33;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
