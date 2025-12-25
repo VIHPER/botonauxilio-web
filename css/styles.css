@@ -58,3 +58,11 @@ h2 {
   text-align: center;
   padding: 20px;
 }
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
