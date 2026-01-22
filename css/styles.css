@@ -10,7 +10,19 @@ body {
   background: #0b1f33;
   color: white;
   padding: 80px 20px;
+  position: relative;
   text-align: center;
+}
+
+.brand-corner {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.brand-corner img {
+  max-width: 140px;
+  height: auto;
 }
 
 .subtitle {
@@ -179,3 +191,40 @@ ul li {
   border-radius: 4px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
+
+/* CONTENEDOR DE IMÁGENES DE PRODUCTO */
+.product-image {
+  max-width: 1000px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* IMAGEN */
+.product-image img {
+  width: 100%;
+  max-width: 500px;   /* controla el tamaño visual */
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* TEXTO DE REFERENCIA (LEGAL / CONCEPTUAL) */
+.product-image figcaption {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #555;
+  font-style: italic;
+}
+
+/* BRANDING */
+.brand {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.brand img {
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+}
+
