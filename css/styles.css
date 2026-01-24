@@ -273,3 +273,15 @@ ul li {
   border-left: 3px solid #0b1f33;
   border-right: 3px solid #0b1f33;
 }
+
+.sector-link {
+  cursor: pointer;
+  color: #1f3c88;
+  transition: color 0.2s ease;
+}
+
+.sector-link:hover {
+  color: #0b1f33;
+  text-decoration: underline;
+}
+
