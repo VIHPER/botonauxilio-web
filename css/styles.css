@@ -242,3 +242,34 @@ ul li {
   margin-top: 8px;
   font-style: italic;
 }
+
+.section.gray p {
+  margin-bottom: 10px;
+}
+
+.section.gray strong {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.highlight-col {
+  background-color: #dcebf8; /* azul claro institucional */
+  font-weight: bold;
+  color: #0b1f33;
+}
+
+.comparison-table th.highlight-col {
+  background-color: #0b1f33;
+  color: white;
+}
+
+.highlight-col {
+  border-left: 3px solid #0b1f33;
+  border-right: 3px solid #0b1f33;
+}
