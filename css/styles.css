@@ -285,3 +285,42 @@ ul li {
   text-decoration: underline;
 }
 
+.download-box {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #1f3c88;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #162b63;
+}
+
+.sector-note {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+  font-style: italic;
+}
+
+.inline-sector-link {
+  color: #1f3c88;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.inline-sector-link:hover {
+  color: #0b1f33;
+}

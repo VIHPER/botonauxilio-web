@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll(".tab-btn");
   const contents = document.querySelectorAll(".sector-content");
   const sectorLinks = document.querySelectorAll(".sector-link");
+  const inlineSectorLinks = document.querySelectorAll(".inline-sector-link");
 
   function activateSector(target) {
     console.log("Activando sector:", target);
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     buttons.forEach(btn => btn.classList.remove("active"));
     contents.forEach(content => content.classList.remove("active"));
 
-    // Activar el botón correcto
+    // Activar botón correspondiente
     const activeButton = document.querySelector(
       `.tab-btn[data-sector="${target}"]`
     );
@@ -21,16 +22,22 @@ document.addEventListener("DOMContentLoaded", function () {
       activeButton.classList.add("active");
     }
 
-    // Activar el contenido correcto
+    // Activar sección
     const activeSection = document.getElementById(target);
     if (activeSection) {
       activeSection.classList.add("active");
     } else {
       console.error("No existe un div con id:", target);
     }
+
+    // Scroll suave hacia arriba
+    const hero = document.querySelector(".hero");
+    if (hero) {
+      hero.scrollIntoView({ behavior: "smooth" });
+    }
   }
 
-  // Click en botones del HERO
+  // Botones del HERO
   buttons.forEach(button => {
     button.addEventListener("click", () => {
       const target = button.getAttribute("data-sector");
@@ -38,8 +45,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Click en títulos de sectores al final de la página
+  // Títulos grandes (Sector Educativo, Gobierno, etc.)
   sectorLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      const target = link.getAttribute("data-sector");
+      activateSector(target);
+    });
+  });
+
+  // Links inline dentro de texto (educativos, industriales, etc.)
+  inlineSectorLinks.forEach(link => {
     link.addEventListener("click", () => {
       const target = link.getAttribute("data-sector");
       activateSector(target);
