@@ -324,3 +324,31 @@ ul li {
 .inline-sector-link:hover {
   color: #0b1f33;
 }
+
+.sector-note {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.inline-sector-link {
+  color: #1f3c88;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.inline-sector-link:hover {
+  color: #0b1f33;
+}
+
+.contact-btn {
+  background: #0b1f33;
+  color: white;
+  border: 2px solid #1f3c88;
+}
+
+.contact-btn:hover {
+  background: #1f3c88;
+}
