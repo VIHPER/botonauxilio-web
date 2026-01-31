@@ -214,6 +214,13 @@
       contacto@botonauxilio.com
         (Disponible próximamente)
       </p>
+
+      <!-- BOTÓN DE CONTACTO -->
+      <div class="download-box">
+        <button class="contact-open-btn">
+          Ponte en contacto
+        </button>
+      </div>
     </section>
   
     <section class="section">
@@ -497,6 +504,12 @@
           (Disponible próximamente)
         </span>
       </p>
+
+      <div class="download-box">
+        <button class="contact-open-btn">
+          Ponte en contacto
+        </button>
+      </div>
     </section>
   </div>
   
@@ -721,8 +734,12 @@
           (Disponible próximamente)
         </span>
       </p>
+      <div class="download-box">
+        <button class="contact-open-btn">
+          Ponte en contacto
+        </button>
+      </div>
     </section>
-
   </div>
 
 
@@ -730,6 +747,64 @@
   <footer class="footer">
     <p>© 2026 Botón de Auxilio Colaborativo — Tecnología mexicana registrada.</p>
   </footer>
+
+  <!-- MODAL -->
+  <div class="contact-modal" id="contactModal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Contacto institucional</h2>
+
+      <form id="contactForm" action="https://formspree.io/f/mpqrqwee" method="POST">
+        <label>
+          Nombre*:
+          <input type="text" name="name" required>
+        </label>
+
+        <label>
+          Correo*:
+          <input type="email" name="email" required>
+        </label>
+
+        <label>
+          Celular (opcional):
+          <input type="tel" name="phone">
+        </label>
+
+        <label>
+          Mensaje:
+          <textarea name="message" rows="4"></textarea>
+        </label>
+
+        <input type="hidden" name="sector" id="sectorField">
+
+        <button type="submit" class="send-btn">Enviar mensaje</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL DE GRACIAS -->
+  <div id="thankYouModal" class="modal">
+    <div class="modal-content">
+      <h2>Gracias por contactarnos</h2>
+
+      <p>
+        Hemos recibido tu mensaje correctamente. Nuestro equipo revisará tu solicitud
+        y se pondrá en contacto contigo para ampliar la información, coordinar una
+        demostración o un piloto institucional.
+      </p>
+
+      <p>
+        Este proyecto está enfocado en soluciones de seguridad crítica, por lo que cada
+        solicitud es atendida de forma personalizada.
+      </p>
+
+      <p><strong>Atentamente,<br>
+        Equipo Botón de Auxilio Colaborativo</strong></p>
+
+      <button class="close-modal-btn" id="closeThankYou">Cerrar</button>
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
   
 </body>

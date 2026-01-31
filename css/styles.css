@@ -352,3 +352,122 @@ ul li {
 .contact-btn:hover {
   background: #1f3c88;
 }
+
+.contact-open-btn {
+  background: #1f3c88;
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-modal {
+  display: none;              /* oculto por defecto */
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+
+  display: flex;
+  align-items: center;        /* vertical */
+  justify-content: center;    /* horizontal */
+}
+
+.modal-content {
+  background: #ffffff;
+  width: 90%;
+  max-width: 520px;
+
+  padding: 2rem;
+  border-radius: 10px;
+
+  max-height: 90vh;
+  overflow-y: auto;
+
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+
+  animation: fadeInScale 0.3s ease;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+}
+
+.send-btn {
+  width: 100%;
+  background: #1f3c88;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.close-modal {
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Modal fondo */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+}
+
+
+.modal-content h2 {
+  color: #1a2f5c;
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Botón cerrar */
+.close-modal-btn {
+  margin-top: 1rem;
+  padding: 10px 22px;
+  border: none;
+  background: #1a2f5c;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.close-modal-btn:hover {
+  background: #25458c;
+}
+
+/* Animación */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
