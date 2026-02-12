@@ -52,6 +52,36 @@ h3 {
   margin-bottom: 10px;
 }
 
+.section h3:first-of-type {
+  margin-top: 48px;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1f2937;
+}
+
+.section p,
+.section li {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #374151;
+}
+
+.sismico-block {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 /* TABLA */
 .comparison-table {
   width: 100%;
@@ -323,6 +353,7 @@ ul li {
 
 .inline-sector-link:hover {
   color: #0b1f33;
+  text-decoration: none;
 }
 
 .sector-note {
@@ -470,4 +501,373 @@ ul li {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+.sector-cross {
+  margin: 28px 0 36px;        /* separa del note y del h3 */
+  padding-left: 16px;
+  border-left: 3px solid #e0e0e0;
+
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+
+  font-style: italic;
+}
+
+.sector-cross strong {
+  font-weight: 600;          /* menos agresivo que bold normal */
+}
+
+.sector-cross .inline-sector-link {
+  font-style: normal;        /* links no en cursiva */
+}
+
+.product-ref {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.sector-cross {
+  margin: 28px 0 36px;
+  padding-left: 16px;
+  border-left: 3px solid #e0e0e0;
+  font-size: 0.95rem;
+  color: #444;
+  font-style: italic;
+}
+
+/* ===============================
+   SECCIÓN ALERTAMIENTO SÍSMICO
+   =============================== */
+
+#sismico {
+  padding: 72px 24px;
+  background-color: #fafafa;
+}
+
+/* Encabezado */
+#sismico .section-header {
+  max-width: 980px;
+  margin: 0 auto 56px;
+}
+
+#sismico h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+#sismico .section-subtitle {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+#sismico .section-intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 820px;
+}
+
+/* Bloques internos */
+#sismico .sismico-block {
+  max-width: 980px;
+  margin: 0 auto 56px;
+}
+
+#sismico .sismico-block h3 {
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+}
+
+#sismico .sismico-block p {
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+/* Listas */
+#sismico ul {
+  padding-left: 20px;
+}
+
+#sismico li {
+  margin-bottom: 10px;
+  line-height: 1.55;
+}
+
+/* ===============================
+   TABLA COMPARATIVA (CLAVE)
+   =============================== */
+
+#sismico .table-wrapper {
+  overflow-x: auto;
+}
+
+#sismico .sismico-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+}
+
+#sismico .sismico-table th,
+#sismico .sismico-table td {
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+#sismico .sismico-table thead {
+  background-color: #0b1f33;
+  color: white;
+}
+
+#sismico .sismico-table th {
+  font-weight: 600;
+}
+
+/* ===============================
+   CONTACTO
+   =============================== */
+
+#sismico .sismico-contact {
+  max-width: 980px;
+  margin: 72px auto;
+  padding: 32px;
+  background-color: #ffffff;
+  border-left: 4px solid #0077cc;
+}
+
+#sismico .image-disclaimer {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 12px;
+}
+
+/* ===============================
+   AVISO LEGAL (NO NEGOCIABLE)
+   =============================== */
+
+#sismico .sismico-legal {
+  max-width: 980px;
+  margin: 64px auto 0;
+  padding: 24px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+
+  font-size: 0.85rem;
+  color: #555;
+}
+
+#sismico .sismico-legal h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#sismico .sismico-legal p {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #444;
+}
+
+.sismico-link {
+  font-weight: 600;
+  color: #b30000; /* rojo institucional / emergencia */
+  text-decoration: underline;
+}
+
+.sismico-link:hover {
+  color: #7a0000;
+}
+
+/* ================= HERO SÍSMICO ================= */
+
+.hero.hero-sismico {
+  background: linear-gradient(180deg, #0f172a 0%, #111827 100%);
+  color: white;
+  padding: 80px 20px;
+  position: relative;
+  text-align: center;
+}
+
+
+.hero-sismico .section-header {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.hero-sismico h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.hero-sismico .section-subtitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #cbd5f5;
+  margin-bottom: 20px;
+}
+
+.hero-sismico .section-intro {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #e5e7eb;
+  max-width: 760px;
+  margin: 0 auto 36px;
+}
+
+/* CTA del Hero */
+.hero-cta {
+  margin-top: 28px;
+}
+
+.hero-cta .btn-primary {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-cta .btn-primary:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.sismico-contact {
+  background-color: #f8fafc;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.sismico-contact p {
+  max-width: 720px;
+  margin: 0 auto 12px;
+}
+
+/* ================= BREADCRUMB ================= */
+
+/* Breadcrumb dentro del hero */
+.hero-sismico {
+  position: relative;
+}
+
+/* Breadcrumb centrado arriba */
+.breadcrumb-nav {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.85rem;
+  z-index: 10;
+  text-align: center;
+}
+
+.breadcrumb-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.breadcrumb-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.breadcrumb-context {
+  margin-left: 6px;
+  opacity: 0.8;
+}
+
+
+
+
+
+.breadcrumb a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.breadcrumb span {
+  margin: 0 6px;
+}
+
+
+
+/* Navegación sísmica */
+.sismico-nav {
+  max-width: 1200px;
+  margin: 24px auto 0;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+}
+
+.sismico-nav a {
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sismico-nav a:hover {
+  text-decoration: underline;
+}
+
+.sismico-nav .breadcrumb {
+  color: #666;
+}
+
+/* ===============================
+   ONE PAGER DOWNLOAD SECTION
+=================================*/
+
+.sismico-download {
+  padding: 60px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.download-card {
+  max-width: 720px;
+  background: #f8fafc;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  border: 1px solid #e5e7eb;
+}
+
+.download-card h3 {
+  margin-bottom: 16px;
+}
+
+.download-card p {
+  margin-bottom: 24px;
+  color: #475569;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
+
+.download-btn:hover {
+  background: #1e40af;
+  transform: translateY(-2px);
 }

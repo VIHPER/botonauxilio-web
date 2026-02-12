@@ -2,13 +2,32 @@ document.addEventListener("DOMContentLoaded", function () {
   
   let activeSector = null;
   let sectorClickCount = {
-    educacion: 0,
-    gobierno: 0,
-    industrial: 0
-  };
+  "sector-edu": 0,
+  "sector-gov": 0,
+  "sector-ind": 0,
+  "movil": 0
+};
+
+
 
 
   console.log("JS de pestañas cargado correctamente");
+
+  function getSectorLabel(sectorId) {
+    switch (sectorId) {
+      case "sector-edu":
+        return "Educación / Universidades";
+      case "sector-gov":
+        return "Gobierno / C4-C5";
+      case "sector-ind":
+        return "Industrial / Residencial";
+      case "movil":
+        return "Aplicación Móvil (Vehículos)";
+      default:
+        return "No definido";
+    }
+  }
+
 
   const buttons = document.querySelectorAll(".tab-btn");
   const contents = document.querySelectorAll(".sector-content");
@@ -55,6 +74,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // -------------------------------
+  // Activar sector si viene por parámetro URL
+  // -------------------------------
+  const params = new URLSearchParams(window.location.search);
+  const sectorFromURL = params.get("sector");
+
+  if (sectorFromURL) {
+    activateSector(sectorFromURL);
+  }
+
+
   // Botones de sector
   buttons.forEach(button => {
     button.addEventListener("click", () => {
@@ -71,13 +101,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Links inline dentro del texto
+  // Links inline dentro del texto (cruce entre sectores o secciones)
   inlineSectorLinks.forEach(link => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+
       const target = link.getAttribute("data-sector");
-      activateSector(target);
+      const section = document.getElementById(target);
+
+      if (section) {
+        // Si existe el ID (ej. #sismico), hacer scroll suave
+        section.scrollIntoView({ behavior: "smooth" });
+      } else {
+        // Si es un sector (edu, gov, ind, movil)
+        activateSector(target);
+      }
     });
   });
+
 
   // Botón Contacto
   contactBtn.addEventListener("click", () => {
@@ -139,7 +180,23 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
 
       const sectorField = document.getElementById("sectorField");
-      sectorField.value = activeSector ?? "no_definido";
+      sectorField.value = getSectorLabel(activeSector);
+
+      const timestampField = document.getElementById("timestampField");
+
+      // Fecha y hora local México (UTC-6 aprox)
+      const now = new Date();
+
+      const timestamp = now.toLocaleString("es-MX", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        timeZoneName: "short"
+      });
+
+      timestampField.value = timestamp;
 
       const formData = new FormData(contactForm);
 
@@ -174,5 +231,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  
 });
