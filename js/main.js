@@ -1,146 +1,166 @@
 document.addEventListener("DOMContentLoaded", function () {
   
-  let activeSector = null;
-  let sectorClickCount = {
-  "sector-edu": 0,
-  "sector-gov": 0,
-  "sector-ind": 0,
-  "movil": 0
-};
-
-
-
-
   console.log("JS de pestañas cargado correctamente");
 
-  function getSectorLabel(sectorId) {
-    switch (sectorId) {
-      case "sector-edu":
-        return "Educación / Universidades";
-      case "sector-gov":
-        return "Gobierno / C4-C5";
-      case "sector-ind":
-        return "Industrial / Residencial";
-      case "movil":
-        return "Aplicación Móvil (Vehículos)";
-      default:
-        return "No definido";
-    }
-  }
+  /* =====================================================
+    NUEVA ARQUITECTURA: APLICACIONES / PRODUCTOS
+  ===================================================== */
 
+  let activeSector = null;
 
-  const buttons = document.querySelectorAll(".tab-btn");
+  const mainTabs = document.querySelectorAll(".main-tab");
+  const subTabsContainers = document.querySelectorAll(".sub-tabs");
+  const subTabs = document.querySelectorAll(".sub-tab");
   const contents = document.querySelectorAll(".sector-content");
-  const sectorLinks = document.querySelectorAll(".sector-link");
-  const inlineSectorLinks = document.querySelectorAll(".inline-sector-link");
   const contactBtn = document.getElementById("contactBtn");
 
-  function activateSector(target) {
-    activeSector = target;
+  // FUNCIÓN CENTRAL  
+  function activateSector(sectorId) {
 
-    if (sectorClickCount[target] !== undefined) {
-      sectorClickCount[target]++;
+    if (!sectorId) return;
+
+    // Reset contenidos
+    contents.forEach(c => c.classList.remove("active"));
+
+    const activeContent = document.getElementById(sectorId);
+    if (activeContent) {
+      activeContent.classList.add("active");
+      activeSector = sectorId;
     }
 
-    console.log("Sector activo:", activeSector);
-    console.log("Clicks por sector:", sectorClickCount);
+    // Determinar grupo automáticamente
+    let group = null;
 
-    console.log("Activando sector:", target);
-
-    // Quitar activo a todos
-    buttons.forEach(btn => btn.classList.remove("active"));
-    contents.forEach(content => content.classList.remove("active"));
-
-    // Activar botón correspondiente
-    const activeButton = document.querySelector(
-      `.tab-btn[data-sector="${target}"]`
-    );
-    if (activeButton) {
-      activeButton.classList.add("active");
+    if (sectorId.startsWith("sector-")) {
+      group = "applications";
     }
 
-    // Activar sección correspondiente
-    const activeSection = document.getElementById(target);
-    if (activeSection) {
-      activeSection.classList.add("active");
-    } else {
-      console.error("No existe un div con id:", target);
+    if (sectorId.startsWith("producto-")) {
+      group = "products";
     }
 
-    // Scroll al HERO
+    if (!group) return;
+
+    // Activar main-tab correcto
+    mainTabs.forEach(t => t.classList.remove("active"));
+    const activeMainTab = document.querySelector(`.main-tab[data-group="${group}"]`);
+    if (activeMainTab) activeMainTab.classList.add("active");
+
+    // Mostrar sub-tabs correcto
+    subTabsContainers.forEach(container => {
+      container.classList.remove("active");
+    });
+
+    const activeContainer = document.getElementById(group + "-tabs");
+    if (activeContainer) {
+      activeContainer.classList.add("active");
+    }
+
+    // Activar sub-tab correcto
+    subTabs.forEach(t => t.classList.remove("active"));
+    const activeSubTab = document.querySelector(`.sub-tab[data-sector="${sectorId}"]`);
+    if (activeSubTab) activeSubTab.classList.add("active");
+
+    // Scroll al hero
     const hero = document.querySelector(".hero");
     if (hero) {
       hero.scrollIntoView({ behavior: "smooth" });
     }
   }
 
-  // -------------------------------
-  // Activar sector si viene por parámetro URL
-  // -------------------------------
-  const params = new URLSearchParams(window.location.search);
-  const sectorFromURL = params.get("sector");
-
-  if (sectorFromURL) {
-    activateSector(sectorFromURL);
-  }
-
-
-  // Botones de sector
-  buttons.forEach(button => {
-    button.addEventListener("click", () => {
-      const target = button.getAttribute("data-sector");
-      activateSector(target);
+  // LISTENERS PARA SUBTABS
+  subTabs.forEach(tab => {
+    tab.addEventListener("click", function () {
+      const sectorId = tab.dataset.sector;
+      activateSector(sectorId);
     });
   });
 
-  // Títulos grandes de sector
+
+  // LISTENERS PARA LINKS INLINE
+  const inlineLinks = document.querySelectorAll(".inline-sector-link");
+
+  inlineLinks.forEach(link => {
+    link.addEventListener("click", function () {
+      const sectorId = link.dataset.sector;
+      activateSector(sectorId);
+    });
+  });
+
+  /* ===============================
+    LISTENERS PARA BLOQUES SECTOR (HOME)
+  =============================== */
+
+  const sectorLinks = document.querySelectorAll(".sector-link");
+
   sectorLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      const target = link.getAttribute("data-sector");
-      activateSector(target);
+    link.addEventListener("click", function () {
+      const sectorId = link.dataset.sector;
+      activateSector(sectorId);
     });
   });
 
-  // Links inline dentro del texto (cruce entre sectores o secciones)
-  inlineSectorLinks.forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault();
+  
+  /* ===============================
+    CAMBIO ENTRE APLICACIONES / PRODUCTOS
+  =============================== */
 
-      const target = link.getAttribute("data-sector");
-      const section = document.getElementById(target);
+  mainTabs.forEach(tab => {
+    tab.addEventListener("click", function () {
 
-      if (section) {
-        // Si existe el ID (ej. #sismico), hacer scroll suave
-        section.scrollIntoView({ behavior: "smooth" });
+      const group = tab.dataset.group;
+      if (!group) return;
+
+      // Si ya estamos en ese grupo, no hacemos nada
+      const currentActive = document.querySelector(".main-tab.active");
+      if (currentActive === tab) return;
+
+      // Definir sector por defecto
+      let defaultSector = null;
+
+      if (group === "applications") {
+        defaultSector = "sector-edu";
+      }
+
+      if (group === "products") {
+        defaultSector = "producto-basic";
+      }
+
+      // Activar sector automáticamente
+      activateSector(defaultSector);
+
+    });
+  });
+
+  
+
+
+  /* ===============================
+     BOTÓN CONTACTO (PROTEGIDO)
+  =============================== */
+  if (contactBtn) {
+    contactBtn.addEventListener("click", () => {
+
+      const activeSector = document.querySelector(".sector-content.active");
+      if (!activeSector) return;
+
+      let contactSection = null;
+
+      const sections = activeSector.querySelectorAll("section");
+      sections.forEach(sec => {
+        const h2 = sec.querySelector("h2");
+        if (h2 && h2.textContent.toLowerCase().includes("contacto")) {
+          contactSection = sec;
+        }
+      });
+
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
       } else {
-        // Si es un sector (edu, gov, ind, movil)
-        activateSector(target);
+        console.warn("No se encontró sección de contacto en el sector activo");
       }
     });
-  });
-
-
-  // Botón Contacto
-  contactBtn.addEventListener("click", () => {
-    const activeSector = document.querySelector(".sector-content.active");
-    if (!activeSector) return;
-
-    let contactSection = null;
-
-    const sections = activeSector.querySelectorAll("section");
-    sections.forEach(sec => {
-      const h2 = sec.querySelector("h2");
-      if (h2 && h2.textContent.toLowerCase().includes("contacto")) {
-        contactSection = sec;
-      }
-    });
-
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    } else {
-      console.warn("No se encontró sección de contacto en el sector activo");
-    }
-  });
+  }
 
   const contactModal = document.getElementById("contactModal");
   const closeModal = document.querySelector(".close-modal");

@@ -33,21 +33,14 @@
         adaptada a tu entorno operativo.
       </p>            
       
-      <div class="sector-tabs">
-        <button class="tab-btn active" data-sector="sector-edu">
-          Educación / Universidades
-        </button>
-      
-        <button class="tab-btn" data-sector="sector-gov">
-          Gobierno / C4-C5
-        </button>
-      
-        <button class="tab-btn" data-sector="sector-ind">
-          Industrial / Residencial
+      <div class="main-tabs">
+  
+        <button class="main-tab active" data-group="applications">
+          Aplicaciones
         </button>
 
-        <button class="tab-btn" data-sector="movil">
-          Aplicación Móvil (Vehículos)
+        <button class="main-tab" data-group="products">
+          Productos
         </button>
 
         <button class="contact-btn" id="contactBtn">
@@ -55,9 +48,49 @@
         </button>
 
       </div>
+
+      <!-- SUBMENÚ APLICACIONES -->
+      <div class="sub-tabs active" id="applications-tabs">
+        <button class="sub-tab active" data-sector="sector-edu">
+          Educación / Universidades
+        </button>
+
+        <button class="sub-tab" data-sector="sector-gov">
+          Gobierno / C4-C5
+        </button>
+
+        <button class="sub-tab" data-sector="sector-ind">
+          Industrial / Residencial
+        </button>
+
+        <button class="sub-tab" data-sector="sector-movil">
+          Aplicación Móvil (Vehículos)
+        </button>
+      </div>
+
+      <!-- SUBMENÚ PRODUCTOS -->
+      <div class="sub-tabs" id="products-tabs">
+        <button class="sub-tab" data-sector="producto-basic">
+          Versión Basic
+        </button>
+
+        <button class="sub-tab" data-sector="producto-advanced">
+          Versión Advanced
+        </button>
+
+        <button class="sub-tab" data-sector="producto-movil">
+          Versión Móvil
+        </button>
+
+        <button class="sub-tab" data-sector="producto-control-general">
+          Control General
+        </button>
+      </div>
+
     </div>
   </header>
 
+  <!-- APLICACIONES -->
   <div id="sector-edu" class="sector-content active">
     <!-- PROBLEMA -->
     <section class="section">
@@ -204,7 +237,11 @@
           Alertamiento Sísmico
         </a>
         como una capacidad complementaria de protección civil,
-        disponible en las ediciones <strong>Basic</strong> y <strong>Advanced</strong>.
+        disponible en las ediciones 
+        <span class="inline-sector-link product-ref" data-sector="producto-basic">Basic</span>
+         y 
+        <span class="inline-sector-link product-ref"
+          data-sector="producto-advanced">Advanced</span>.
       </p>
 
     </section>
@@ -490,7 +527,11 @@
           Alertamiento Sísmico
         </a>
         como un mecanismo complementario de difusión,
-        mediante las ediciones <strong>Basic</strong> y <strong>Advanced</strong>,
+        mediante las ediciones
+        <span class="inline-sector-link product-ref" data-sector="producto-basic">Basic</span>
+         y 
+        <span class="inline-sector-link product-ref"
+          data-sector="producto-advanced">Advanced</span>,
         sujeto a convenios con proveedores oficialmente autorizados.
       </p>
 
@@ -507,7 +548,7 @@
           <span class="inline-sector-link" data-sector="sector-edu">educativos</span>,
           <span class="inline-sector-link" data-sector="sector-ind">industriales y residenciales</span>
           y a aplicaciones móviles para 
-          <span class="inline-sector-link" data-sector="movil">
+          <span class="inline-sector-link" data-sector="sector-movil">
             vehículos
           </span>
           con protocolos de seguridad institucional.
@@ -741,7 +782,11 @@
         </a>
         como apoyo a protocolos de evacuación,
         continuidad operativa y protección del personal,
-        disponible en las ediciones <strong>Basic</strong> y <strong>Advanced</strong>.
+        disponible en las ediciones
+        <span class="inline-sector-link product-ref" data-sector="producto-basic">Basic</span>
+         y 
+        <span class="inline-sector-link product-ref"
+          data-sector="producto-advanced">Advanced</span>.
       </p>
 
       <div class="download-box">
@@ -758,7 +803,7 @@
           y a integración con
           <span class="inline-sector-link" data-sector="sector-gov">seguridad pública (C4 / C5)</span>
           y a aplicaciones móviles para 
-          <span class="inline-sector-link" data-sector="movil">
+          <span class="inline-sector-link" data-sector="sector-movil">
             vehículos
           </span>.
         </p>
@@ -789,9 +834,9 @@
         </button>
       </div>
     </section>
-  </div>
+  </div> <!-- cierre de sector-ind -->
 
-  <div class="sector-content" id="movil">
+  <div id="sector-movil" class="sector-content">
     <div class="section gray">
 
       <h2>Botón de Auxilio Colaborativo Móvil</h2>
@@ -799,7 +844,8 @@
 
       <div class="sector-note">
         ⚠️ Disponible para instituciones que cuenten con infraestructura
-        <strong>Botón de Auxilio Colaborativo Advanced</strong>.
+        <span class="inline-sector-link product-ref"
+          data-sector="producto-advanced">Botón de Auxilio Colaborativo Advanced</span>.
         El despliegue a nivel gubernamental se encuentra en fase de coordinación.
       </div>
 
@@ -816,7 +862,8 @@
           infraestructura de seguridad pública (C4 / C5)
         </span>
         mediante el despliegue previo de
-        <span class="product-ref">Botón de Auxilio Colaborativo Advanced</span>.
+        <span class="inline-sector-link product-ref"
+          data-sector="producto-advanced">Botón de Auxilio Colaborativo Advanced</span>.
       </p>
 
       <h3>El problema operativo en rutas y vialidades</h3>
@@ -881,16 +928,24 @@
 
         <p>
           Solicita información técnica, demostración funcional o un
-          <strong>piloto controlado</strong> para transporte institucional,
-          flotas privadas o universidades con infraestructura
-          <strong>Botón de Auxilio Colaborativo Advanced</strong>.
+          <strong>piloto controlado</strong> para 
+          <span class="inline-sector-link" data-sector="sector-ind">transporte institucional, flotas privadas</span>
+           o 
+          <span class="inline-sector-link" data-sector="sector-edu">universidades</span> con infraestructura
+          <span class="inline-sector-link product-ref"
+          data-sector="producto-advanced">Botón de Auxilio Colaborativo Advanced</span>.
         </p>
 
         <ul>
           <li>Evaluación técnica</li>
           <li>Alcance operativo y escalabilidad</li>
-          <li>Requisitos de infraestructura Advanced</li>
-          <li>Integración con C4 / C5</li>
+          <li>Requisitos de infraestructura 
+            <span class="inline-sector-link product-ref"
+            data-sector="producto-advanced">Advanced</span>
+          </li>
+          <li>Integración con 
+            <span class="inline-sector-link" data-sector="sector-gov">seguridad pública (C4 / C5)</span>
+          </li>
         </ul>
 
         <p>
@@ -908,12 +963,645 @@
         <p class="sector-note">
           El uso gubernamental masivo está sujeto a convenios
           interinstitucionales y despliegue previo de infraestructura
-          colaborativa Advanced.
+          colaborativa
+          <span class="inline-sector-link product-ref"
+          data-sector="producto-advanced">Advanced</span>.
         </p>
 
       </section>
 
     </div>
+  </div> <!-- cierre de movil -->
+
+  <!-- PRODUCTOS -->
+  <div id="producto-basic" class="sector-content">
+
+    <div class="section gray">
+
+      <h2>Botón de Auxilio Colaborativo – Versión BASIC</h2>
+      <p class="subtitle">
+        Activación física inmediata con arquitectura Dual-Link Wi-Fi y red colaborativa.
+      </p>
+
+      <!-- IMAGEN PRODUCTO -->
+      <figure class="product-figure">
+        <img src="img\boton-auxilio.png"
+            alt="Botón de Auxilio Colaborativo BASIC instalado en muro"
+            class="product-image-main">
+
+        <figcaption>
+          Ilustración 1 - Botón de Auxilio BASIC: Diseño compacto para instalación en muros o escritorios.
+        </figcaption>
+      </figure>
+
+      <!-- PROBLEMA -->
+      <section class="product-block">
+        <h3>El Problema Operativo: El Factor Tiempo</h3>
+        <ul>
+          <li>Llamadas 911 con entrevista bajo estrés.</li>
+          <li>Aplicaciones móviles con múltiples pasos.</li>
+          <li>Errores en dirección y referencias.</li>
+          <li>Retrasos críticos en despacho.</li>
+        </ul>
+      </section>
+
+      <!-- SOLUCIÓN -->
+      <section class="product-block">
+        <h3>La Solución: Acción Única con Datos Precisos</h3>
+        <ul>
+          <li>Botón físico dedicado.</li>
+          <li>Envío automático de ficha técnica pre-configurada.</li>
+          <li>Integración con 
+            <span class="inline-sector-link" data-sector="sector-gov">seguridad pública (C4 / C5)</span>
+             o privada.</li>
+          <li>Transmisión en cuestión de segundos.</li>
+        </ul>
+      </section>
+
+      <!-- DUAL LINK -->
+      <section class="product-block">
+        <h3>Arquitectura Dual-Link Wi-Fi</h3>
+
+        <div class="dual-grid">
+          <div class="dual-card">
+            <h4>1. Enlace Directo</h4>
+            <p>
+              Conexión al internet local (SSID + Password) para envío
+              inmediato a la autoridad configurada.
+            </p>
+          </div>
+
+          <div class="dual-card">
+            <h4>2. Modo Colaborativo (Puente)</h4>
+            <p>
+              Si no hay internet, busca dispositivos BASIC o 
+              <span class="inline-sector-link product-ref" data-sector="producto-advanced">ADVANCED</span>
+               cercanos
+              y selecciona automáticamente el nodo con mejor señal para
+              retransmitir la alerta.
+            </p>
+          </div>
+        </div>
+
+        <!-- DIAGRAMA RED COLABORATIVA -->
+        <figure class="product-figure diagram-figure">
+          <img src="img/receptor-institucional.png"
+              alt="Diagrama de red colaborativa donde un dispositivo con internet sirve de puente a otro sin internet"
+              class="product-image-diagram">
+
+          <figcaption>
+            Ilustración 2 - Diagrama de Red Colaborativa: Dispositivo A (con internet) sirviendo de puente al Dispositivo B (sin internet).
+          </figcaption>
+        </figure>
+
+        <div class="legal-note">
+          El dispositivo realiza únicamente la transmisión técnica de la solicitud.
+          La atención y tiempos de respuesta corresponden a la autoridad receptora.
+        </div>
+      </section>
+
+      <!-- PRECONFIGURACIÓN -->
+      <section class="product-block">
+        <h3>Ficha Técnica de Pre-Configuración</h3>
+
+        <div class="config-grid">
+          <ul>
+            <li>Calle</li>
+            <li>Número Exterior</li>
+            <li>Número Interior</li>
+            <li>Colonia</li>
+          </ul>
+
+          <ul>
+            <li>Municipio</li>
+            <li>Latitud</li>
+            <li>Longitud</li>
+            <li>Perfil de aplicación</li>
+          </ul>
+        </div>
+
+        <p>
+          Puede configurarse con parámetros de comunicación pública
+          predefinidos por la entidad gubernamental, o con datos de
+          seguridad privada proporcionados por el proveedor de vigilancia.
+        </p>
+      </section>
+
+      <!-- ALERTAMIENTO SÍSMICO -->
+      <section class="product-block">
+        <h3>Preparado para Alertamiento Sísmico (Opcional)</h3>
+
+        <ul>
+          <li>Capacidad de interpretar flujos de datos de proveedores autorizados.</li>
+          <li>Activación sonora basada en geolocalización.</li>
+          <li>Difusión colaborativa hacia nodos sin internet.</li>
+        </ul>
+
+        <div class="legal-note">
+          El dispositivo no detecta ni mide sismos.
+          La funcionalidad depende de convenio directo con proveedores
+          legalmente autorizados de alertamiento.
+        </div>
+      </section>
+
+      <!-- VENTAJAS -->
+      <section class="product-block">
+        <h3>Ventajas Competitivas</h3>
+        <ul>
+          <li>Cero fricción operativa.</li>
+          <li>Micro-ubicación exacta pre-cargada.</li>
+          <li>Arquitectura colaborativa redundante.</li>
+          <li>Arranque automático al encender.</li>
+        </ul>
+      </section>
+
+      <!-- DESCARGA -->
+      <div class="download-box">
+        <a href="pdf/One-Pager_BotonAuxilioColaborativoBasic.pdf"
+          class="download-btn"
+          target="_blank"
+          rel="noopener noreferrer">
+          Descargar One-Pager – Versión BASIC
+        </a>
+      </div>
+
+    </div>
+
+  </div> <!-- cierre de producto-basic -->
+
+  <div id="producto-advanced" class="sector-content">
+    <div class="section gray">
+
+      <h2>Botón de Auxilio Colaborativo – Versión ADVANCED</h2>
+      <p class="subtitle">
+        Máxima resiliencia y largo alcance para entornos sin conectividad estable.
+      </p>
+
+      <!-- IMAGEN 1 -->
+      <figure class="product-figure">
+        <img src="img/boton-auxilio.png"
+            alt="Botón ADVANCED con sistema de doble antena WiFi y LoRa"
+            class="product-image-main">
+        <figcaption>
+          Ilustración 1 - Botón ADVANCED con sistema de doble antena integrada (Wi-Fi y LoRa).
+        </figcaption>
+      </figure>
+
+      <div class="highlight-box">
+        Dispositivo de alta disponibilidad con arquitectura de Triple Vía:
+        Internet Directo · Puente Wi-Fi · Puente LoRa de Largo Alcance.
+      </div>
+
+      <!-- PROBLEMA -->
+      <h3>Puntos Ciegos de Conectividad</h3>
+      <ul>
+        <li>Zonas sin infraestructura Wi-Fi (parques, paraderos, estacionamientos).</li>
+        <li>Saturación o caída de red en emergencias masivas.</li>
+        <li>Instalaciones extensas donde el Wi-Fi no cubre perímetros completos.</li>
+      </ul>
+
+      <!-- ARQUITECTURA -->
+      <h3>Arquitectura de Triple Vía Inteligente</h3>
+
+      <div class="triple-grid">
+
+        <div class="triple-card">
+          <h4>1. Conexión Directa</h4>
+          <p>
+            Si existe conexión a internet local, el dispositivo transmite
+            directamente al centro de monitoreo configurado (C4/C5 o privado).
+          </p>
+        </div>
+
+        <div class="triple-card">
+          <h4>2. Puente Wi-Fi Colaborativo</h4>
+          <p>
+            Si pierde internet, busca nodos 
+            <span class="inline-sector-link product-ref" data-sector="producto-basic">Basic</span>
+             o Advanced cercanos para retransmitir la alerta vía Wi-Fi.
+          </p>
+        </div>
+
+        <div class="triple-card">
+          <h4>3. Puente LoRa de Largo Alcance</h4>
+          <p>
+            Si no hay Wi-Fi disponible, activa comunicación LoRa para localizar
+            un nodo Advanced con internet a mayor distancia.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- IMAGEN 2 -->
+      <figure class="product-figure diagram-figure">
+        <img src="img/receptor-institucional.png"
+            alt="Diagrama efecto domino LoRa en red colaborativa"
+            class="product-image-diagram">
+        <figcaption>
+          Ilustración 2 - Diagrama de "Efecto Dominó": Transmisión de alerta desde zona sin cobertura hacia centro de control mediante salto LoRa.
+        </figcaption>
+      </figure>
+
+      <!-- VENTAJAS LORA -->
+      <h3>Ventajas Técnicas de la Comunicación LoRa</h3>
+      <ul>
+        <li>Alcance significativamente superior al Wi-Fi convencional.</li>
+        <li>Bajo consumo energético para operación continua.</li>
+        <li>Mayor penetración en espacios abiertos o semiurbanos.</li>
+        <li>Alta resiliencia ante saturación de redes comerciales.</li>
+        <li>Arquitectura escalable tipo malla colaborativa.</li>
+      </ul>
+
+      <!-- EFECTO DOMINO -->
+      <h3>Red Colaborativa de Largo Alcance</h3>
+      <p>
+        Cuando un nodo Advanced recibe una alerta o evento sísmico desde un proveedor autorizado,
+        puede retransmitir la señal vía Wi-Fi a dispositivos cercanos y simultáneamente vía LoRa
+        a otros nodos Advanced dentro de su cobertura extendida, generando un efecto dominó de alerta.
+      </p>
+
+      <!-- ALERTAMIENTO SISMICO -->
+      <h3>Capacidad de Integración para Alertamiento Sísmico</h3>
+      <ul>
+        <li>Interpretación técnica de flujos de datos provenientes de proveedores autorizados.</li>
+        <li>Activación del aviso sonoro oficial conforme a lineamientos regulatorios.</li>
+        <li>Difusión colaborativa vía Wi-Fi y LoRa hacia zonas sin conectividad.</li>
+        <li>Requiere convenio con proveedores facultados (ej. SkyAlert).</li>
+      </ul>
+
+      <div class="disclaimer-box">
+        Nota: El dispositivo transmite información en segundos hacia la autoridad configurada.
+        La atención y tiempos de respuesta operativa dependen exclusivamente de la institución correspondiente.
+      </div>
+
+      <!-- APLICACIONES -->
+      <h3>Sectores de Aplicación Extendida</h3>
+      <ul>
+        <li>Paraderos y espacios públicos sin infraestructura de red.</li>
+        <li>Perímetros industriales y campus extensos.</li>
+        <li>Estacionamientos y zonas comunes residenciales.</li>
+        <li>Redes urbanas de última milla para gobiernos municipales.</li>
+      </ul>
+
+      <div class="download-box">
+
+        <a href="pdf/One-Pager_BotonAuxilioColaborativoAdvanced.pdf"
+          class="download-btn"
+          target="_blank"
+          rel="noopener">
+          Descargar One-Pager – Botón Advanced
+        </a>
+
+        <p class="sector-note">
+          Documento técnico institucional para evaluación de cobertura,
+          análisis de red LoRa y presentación ejecutiva.
+        </p>
+
+      </div>
+
+      <!-- CONTACTO -->
+      <section class="contact-institutional">
+
+        <h2>Contacto Institucional</h2>
+
+        <p>
+          Solicita un análisis de cobertura LoRa y diseño de red colaborativa para tu zona.
+        </p>
+
+        <div class="center-button">
+          <button class="contact-open-btn">
+            Solicitar análisis técnico
+          </button>
+        </div>
+
+      </section>
+
+    </div>
+  </div> <!-- cierre de producto-advanced -->
+
+  <div id="producto-movil" class="sector-content">
+    <div class="section gray">
+
+    <h2>Botón de Auxilio – Versión MÓVIL</h2>
+    <p class="subtitle">
+      Protección en movimiento y transmisión dinámica de ubicación.
+    </p>
+
+    <div class="sector-note">
+      ⚠️ Requiere infraestructura previa con nodos
+      <span class="inline-sector-link product-ref"
+          data-sector="producto-advanced">Botón de Auxilio Colaborativo Advanced</span>
+       para operación dentro del ecosistema.
+    </div>
+
+    <!-- PROBLEMA -->
+    <h3>El reto operativo en movilidad</h3>
+    <ul>
+      <li>Ubicación imprecisa en carreteras o zonas desconocidas</li>
+      <li>Cambio constante de jurisdicción municipal</li>
+      <li>Pérdida de rastro cuando el vehículo continúa en movimiento</li>
+      <li>Dificultad para describir ubicación bajo estrés</li>
+    </ul>
+
+    <!-- SOLUCIÓN -->
+    <h3>Arquitectura de Transmisión Dinámica (LoRa + GPS)</h3>
+
+    <ul>
+      <li>Activación física de acción única</li>
+      <li>Transmisión vía LoRa hacia nodo 
+        <span class="inline-sector-link product-ref"
+          data-sector="producto-advanced">Advanced</span>
+
+         más estable
+      </li>
+      <li>Envío de ubicación inicial + datos del vehículo</li>
+      <li>Actualización automática de posición cada 30 segundos</li>
+      <li>Selección automática de nuevo nodo si cambia el entorno</li>
+    </ul>
+
+    <p>
+      El dispositivo versión Móvil funciona como emisor dedicado.
+      No actúa como puente para otros dispositivos, sino que utiliza
+      la red de nodos Advanced para procurar el envío de la información
+      hacia el centro de monitoreo configurado.
+    </p>
+
+    <!-- IMÁGENES -->
+    <div class="product-images">
+
+      <figure class="product-image">
+        <img src="img/boton-auxilio.png"
+            alt="Botón de Auxilio Móvil instalado en cabina de vehículo">
+        <figcaption>
+          Ilustración 1 - Botón de Auxilio Móvil: Diseño ergonómico para instalación en cabina o tablero.
+        </figcaption>
+      </figure>
+
+      <figure class="product-image">
+        <img src="img/receptor-institucional.png"
+            alt="Diagrama transmisión dinámica entre vehículo y nodos Advanced">
+        <figcaption>
+          Ilustración 2 - Diagrama de Transmisión Dinámica: Vehículo en movimiento saltando entre nodos Advanced conforme cambia su ubicación.
+        </figcaption>
+      </figure>
+
+    </div>
+
+    <!-- FUNCIONAMIENTO -->
+    <h3>Funcionamiento en movimiento</h3>
+
+    <ul>
+      <li>Al activarse, envía ubicación inicial y ficha del vehículo</li>
+      <li>Actualiza coordenadas GPS cada 30 segundos</li>
+      <li>Si el nodo 
+        <span class="inline-sector-link product-ref"
+          data-sector="producto-advanced">Advanced</span>
+         inicial queda fuera de alcance, busca uno nuevo
+      </li>
+      <li>Reintenta transmisión ante interferencias geográficas o ambientales</li>
+    </ul>
+
+    <p>
+      En caso de cambio de jurisdicción municipal, el sistema permite
+      redirigir la información hacia la autoridad correspondiente,
+      conforme a la configuración institucional previamente establecida.
+    </p>
+
+    <!-- FICHA VEHÍCULO -->
+    <h3>Ficha Operativa de Emergencia</h3>
+
+    <ul>
+      <li>Placas registradas</li>
+      <li>Marca, Submarca y Color</li>
+      <li>Punto inicial de activación</li>
+      <li>Trayectoria actualizada durante el evento</li>
+    </ul>
+
+    <!-- DISCLAIMER LEGAL SUAVE -->
+    <div class="legal-note">
+      El dispositivo transmite información en segundos hacia la infraestructura configurada.
+      La atención, despacho y tiempos de respuesta dependen exclusivamente
+      de las autoridades o proveedores de seguridad correspondientes.
+    </div>
+
+    <!-- ONE PAGER -->
+    <div class="download-box">
+
+      <a href="pdf/One-Pager_BotonAuxilioMovil.pdf"
+        class="download-btn"
+        target="_blank"
+        rel="noopener">
+        Descargar One-Pager – Botón de Auxilio Móvil
+      </a>
+
+      <p class="sector-note">
+        Documento técnico para integración de flotas institucionales.
+      </p>
+
+    </div>
+
+    <!-- CONTACTO -->
+    <section class="contact-institutional">
+
+      <h2>Contacto Institucional</h2>
+
+      <p>
+        Solicita información técnica para integrar tu flota
+        a la red de auxilio colaborativa.
+      </p>
+
+      <div class="center-button">
+        <button class="contact-open-btn">
+          Solicitar información técnica
+        </button>
+      </div>
+
+    </section>
+
+  </div>
+  </div> <!-- cierre de producto-movil -->
+
+  <div id="producto-control-general" class="sector-content">
+    <div class="section gray">
+
+      <h2>Centro de Control y Monitoreo (CCM)</h2>
+      <p class="subtitle">
+        Inteligencia centralizada y gestión multievento.
+      </p>
+
+      <div class="sector-note">
+        ⚠️ Dispositivo diseñado para uso institucional por personal
+        autorizado (seguridad pública o privada).
+        Requiere conexión activa a Internet para operar.
+      </div>
+
+      <!-- PROBLEMA -->
+      <h3>El Problema Operativo: Fragmentación de la Alerta</h3>
+      <ul>
+        <li>Reportes dispersos por llamadas o aplicaciones</li>
+        <li>Pérdida de información bajo estrés</li>
+        <li>Dificultad para monitorear múltiples eventos simultáneamente</li>
+        <li>Dependencia de sedes fijas de operación</li>
+      </ul>
+
+      <!-- SOLUCIÓN -->
+      <h3>La Solución: Plataforma Unificada de Gestión</h3>
+
+      <p>
+        El Centro de Control y Monitoreo (CCM) es la terminal que
+        recepciona y organiza los eventos enviados por los dispositivos
+        <span class="inline-sector-link product-ref" data-sector="producto-basic">Basic</span>,
+         <span class="inline-sector-link product-ref" data-sector="producto-advanced">Advanced</span>
+          y
+        <span class="inline-sector-link product-ref" data-sector="producto-movil">Móvil</span>.
+      </p>
+
+      <ul>
+        <li>Capacidad de hasta 10 canales simultáneos</li>
+        <li>Verificación automática de integridad de datos</li>
+        <li>Alerta sonora ante nuevo evento</li>
+        <li>Interfaz web accesible desde laptop en la misma red</li>
+      </ul>
+
+      <!-- IMÁGENES -->
+      <div class="product-images">
+
+        <figure class="product-image">
+          <img src="img/boton-auxilio.png"
+              alt="Interfaz del Centro de Control y Monitoreo en laptop">
+          <figcaption>
+            Ilustración 1 - Interfaz del CCM en Laptop: Vista de mapa y gestión de 10 canales simultáneos.
+          </figcaption>
+        </figure>
+
+        <figure class="product-image">
+          <img src="img/receptor-institucional.png"
+              alt="Centro de Control operando desde vehículo con conexión portátil">
+          <figcaption>
+            Ilustración 2 - Operación Móvil: El CCM operando desde un vehículo con conexión portátil.
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <!-- FUNCIONAMIENTO EVENTOS FIJOS -->
+      <h3>Gestión de Eventos Fijos (
+        <span class="inline-sector-link product-ref" data-sector="producto-basic">Basic</span> /
+         <span class="inline-sector-link product-ref" data-sector="producto-advanced">Advanced</span>)
+      </h3>
+
+      <ul>
+        <li>Recepción de micro-ubicación completa</li>
+        <li>Despliegue de Calle, No. Ext/Int, Colonia y Municipio</li>
+        <li>Latitud y Longitud con mapa interactivo</li>
+        <li>Liberación automática de canal tras recepción completa</li>
+      </ul>
+
+      <p>
+        El evento permanece visible en el sistema hasta que el operador
+        lo da por concluido manualmente.
+      </p>
+
+      <!-- EVENTOS MÓVILES -->
+      <h3>Gestión de Eventos Móviles</h3>
+
+      <ul>
+        <li>Identificación automática como evento dinámico</li>
+        <li>Recepción de datos vehiculares (Placas, Marca, Submarca, Color)</li>
+        <li>Ubicación inicial y ubicación actual</li>
+        <li>Actualización cada 30 segundos</li>
+      </ul>
+
+      <p>
+        En eventos móviles, el canal permanece ocupado para permitir
+        la actualización constante de ubicación hasta que el operador
+        finaliza el evento o se alcanza el tiempo máximo configurado
+        sin recibir nuevos datos.
+      </p>
+
+      <!-- INTERFAZ -->
+      <h3>Ficha Operativa de Gestión</h3>
+
+      <ul>
+        <li>Fecha y hora de activación</li>
+        <li>Cronómetro de tiempo transcurrido</li>
+        <li>Mapa interactivo con coordenadas copiables</li>
+        <li>Indicadores visuales: Nuevo / En Atención / Concluido</li>
+      </ul>
+
+      <div class="legal-note">
+        El CCM es una herramienta de recepción y visualización de datos.
+        El despacho, atención y tiempos de respuesta dependen exclusivamente
+        del personal operativo y de las autoridades competentes.
+      </div>
+
+      <!-- MOVILIDAD -->
+      <h3>Movilidad Operativa</h3>
+
+      <p>
+        El CCM puede operar en sede fija o de forma móvil utilizando
+        conexión portátil a Internet. Esta característica permite
+        mantener supervisión durante operativos especiales,
+        eventos masivos o despliegues temporales.
+      </p>
+
+      <!-- ALERTAMIENTO SÍSMICO -->
+      <h3>Función Extendida: Difusión de Alertamiento Preventivo</h3>
+
+      <p>
+        El CCM puede actuar como nodo emisor de difusión preventiva
+        hacia dispositivos vinculados a sus canales.
+      </p>
+
+      <ul>
+        <li>Activación de señal sonora en red conectada</li>
+        <li>Distribución sujeta a convenio con proveedor autorizado</li>
+        <li>Uso exclusivo de protocolos oficiales</li>
+      </ul>
+
+      <div class="legal-note">
+        La función de alertamiento preventivo requiere convenio con
+        proveedores legalmente facultados para la distribución de señales
+        (por ejemplo, SkyAlert). El CCM no genera ni sustituye sistemas
+        oficiales de detección sísmica.
+      </div>
+
+      <!-- ONE PAGER -->
+      <div class="download-box">
+
+        <a href="pdf/One-Pager_CCM.pdf"
+          class="download-btn"
+          target="_blank"
+          rel="noopener">
+          Descargar One-Pager – Centro de Control y Monitoreo
+        </a>
+
+        <p class="sector-note">
+          Documento técnico para integración institucional.
+        </p>
+
+      </div>
+
+      <!-- CONTACTO -->
+      <section class="contact-institutional">
+
+        <h2>Contacto Institucional</h2>
+
+        <p>
+          Solicita una presentación técnica o análisis de implementación
+          para tu institución.
+        </p>
+
+        <div class="center-button">
+          <button class="contact-open-btn">
+            Solicitar demostración técnica
+          </button>
+        </div>
+
+      </section>
+
+    </div>
+
   </div>
 
   
