@@ -920,7 +920,7 @@ ul li {
 
 /* SUBMENÚ CONTENEDOR */
 .subnav-container {
-  border-top: 1px solid rgba(255,255,255,0.2);
+  border-top: 1px solid #ffffff; /* línea blanca para separar */
   padding-top: 15px;
 }
 
