@@ -897,7 +897,7 @@ ul li {
 .main-tab {
   background-color: #383B40;   /* gris claro */
   color: #ffffff;              /* texto blanco */
-  border: 2px solid transparent;
+  border: 1px solid #ffffff; /* borde blanco para resaltar */
   padding: 10px 18px;
   border-radius: 6px;
   cursor: pointer;
@@ -907,7 +907,8 @@ ul li {
 
 /* HOVER */
 .main-tab:hover {
-  background-color: #cfcfcf;   /* gris más oscuro */
+  background-color: #cfcfcf;   /* gris claro */
+  color:#383B40
 }
 
 
@@ -931,6 +932,7 @@ ul li {
   text-align: center;
 }
 
+
 .sub-tabs.active {
   display: flex;
   justify-content: center;
@@ -942,7 +944,7 @@ ul li {
 .sub-tab {
   background-color: #383B40;   /* gris oscuro */
   color: #ffffff;              /* texto blanco */
-  border: 2px solid transparent;
+  border: 1px solid #ffffff; /* borde blanco para resaltar */
   padding: 10px 18px;
   border-radius: 6px;
   cursor: pointer;
@@ -952,6 +954,7 @@ ul li {
 
 .sub-tab:hover {
   background-color: #cfcfcf;   /* gris más claro */
+  color: #383B40;              /* texto gris oscuro */
 }
 
 .sub-tab.active {
