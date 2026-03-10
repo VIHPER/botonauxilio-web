@@ -18,7 +18,7 @@
         <img src="img/Logo-VIHPER.png" alt="VIHPER">
       </div>
 
-      <h1>Sistema físico de solicitud de auxilio con micro-ubicación precisa</h1>
+      <h1>Sistema físico de solicitud de auxilio con micro-ubicación configurada</h1>
       <p class="slogan">
         Tu seguridad, en un solo toque
       </p>
@@ -124,7 +124,7 @@
         <li>Emergencias en sanitarios, aulas, pasillos y estacionamientos</li>
         <li>Agresiones contra estudiantes y personal académico</li>
         <li>Limitaciones operativas de sirenas y botones analógicos</li>
-        <li>Necesidad institucional de registrar, auditar y documentar eventos de auxilio</li>
+        <li>Necesidad de respuesta inmediata ante solicitudes de auxilio dentro del campus</li>
       </ul>
     </section>
     
@@ -134,6 +134,7 @@
       
       <div class="table-container">
         <table class="comparison-table">
+
           <thead>
             <tr>
               <th>Característica</th>
@@ -142,31 +143,80 @@
               <th class="highlight-col">Botón Colaborativo</th>
             </tr>
           </thead>
+
           <tbody>
+
             <tr>
-              <td>Activación inmediata del sistema</td>
+              <td>Activación física inmediata de la alerta</td>
+              <td>No (requiere usar el teléfono)</td>
+              <td>Sí</td>
+              <td class="highlight-col">Sí</td>
+            </tr>
+
+            <tr>
+              <td>Punto físico dedicado para solicitar auxilio</td>
               <td>No</td>
               <td>Sí</td>
               <td class="highlight-col">Sí</td>
             </tr>
+
             <tr>
-              <td>Ubicación precisa</td>
-              <td>Limitada</td>
+              <td>Ubicación del evento</td>
+              <td>Limitada (GPS del teléfono)</td>
+              <td>No disponible</td>
+              <td class="highlight-col">
+                Sí (micro-ubicación configurada
+                <span class="tooltip">
+                  *
+                  <span class="tooltip-text">
+                  La precisión de la ubicación depende de la correcta configuración inicial
+                  del dispositivo (dirección, coordenadas GPS o punto de instalación).
+                  </span>
+                </span>)
+              </td>
+            </tr>
+
+            <tr>
+              <td>Identificación del origen exacto de la alerta</td>
+              <td>Limitada (depende del usuario)</td>
+              <td>No (solo señal sonora)</td>
+              <td class="highlight-col">
+                Sí (según configuración del dispositivo
+                <span class="tooltip">
+                *
+                  <span class="tooltip-text">
+                  La precisión de la ubicación depende de la correcta configuración inicial
+                  del dispositivo (dirección, coordenadas GPS o punto de instalación).
+                  </span>
+                </span>)
+              </td>
+            </tr>
+
+            <tr>
+              <td>Notificación de auxilio al centro de monitoreo</td>
+
+              <td>Sí (requiere conexión del teléfono)</td>
+
               <td>No</td>
-              <td class="highlight-col">Sí (micro-ubicación)</td>
+
+              <td class="highlight-col">
+                Sí (directa o a través de un nodo del sistema)
+                <span class="tooltip">**
+                  <span class="tooltip-text">
+                  El envío de la solicitud de auxilio requiere conectividad a Internet hacia el
+                  sistema de monitoreo. Esta conectividad puede estar disponible directamente en
+                  el dispositivo o a través de otro dispositivo cercano del sistema (versión
+                  Basic o Advanced) que disponga de acceso a Internet y funcione como nodo de
+                  enlace para transmitir la alerta.
+
+                  La disponibilidad de la transmisión depende de la conectividad a Internet
+                  existente dentro del entorno de instalación.
+                  </span>
+                </span>
+              </td>
+
             </tr>
-            <tr>
-              <td>Identificación precisa del origen de la alerta</td>
-              <td>Limitada (GPS / usuario)</td>
-              <td>No (solo sonido)</td>
-              <td class="highlight-col">Sí (micro-ubicación configurada)</td>
-            </tr>
-            <tr>
-              <td>Funciona sin Wi-Fi</td>
-              <td>No</td>
-              <td>Sí</td>
-              <td class="highlight-col">Sí (Mesh)</td>
-            </tr>
+
           </tbody>
         </table>
       </div>
@@ -222,7 +272,14 @@
           <p class="time">&lt; 10 s</p>
           <p class="description">
             Activación física inmediata.
-            Ubicación exacta enviada al sistema de monitoreo.
+            Ubicación configurada enviada al sistema de monitoreo
+            <span class="tooltip">
+              *
+              <span class="tooltip-text">
+                La precisión de la ubicación depende de la correcta configuración inicial
+                del dispositivo (dirección, coordenadas GPS o punto de instalación).
+              </span>
+            </span> .
           </p>
         </div>
       </div>
@@ -345,8 +402,37 @@
         <p>
           Integrable a centros de monitoreo C4 y C5, espacios públicos,
           edificios gubernamentales y comunidades.
-          El sistema permite recibir solicitudes de auxilio con ubicación precisa
-          y registro del evento para seguimiento institucional.
+          El sistema permite recibir solicitudes de auxilio con ubicación configurada
+          <span class="tooltip">
+              *
+              <span class="tooltip-text">
+                La precisión de la ubicación depende de la correcta configuración inicial
+                del dispositivo (dirección, coordenadas GPS o punto de instalación).
+              </span>
+            </span> y visualización operativa en tiempo real para atención inmediata.
+        </p>
+      </div>
+
+      <hr class="note-divider">
+
+      <div class="tech-note">
+        <strong>Condiciones técnicas del sistema</strong>
+        <p>
+          * La micro-ubicación mostrada en el sistema depende de la correcta
+          configuración inicial del dispositivo, incluyendo la dirección,
+          coordenadas GPS o punto de instalación definidos durante el proceso
+          de configuración. Una configuración incorrecta puede afectar la
+          precisión de la ubicación mostrada en el sistema de monitoreo.
+        </p>
+
+        <p>
+          ** La transmisión de la solicitud de auxilio requiere conectividad a Internet. 
+          La conexión puede establecerse mediante una red Wi-Fi con acceso a Internet 
+          o a través de un dispositivo cercano del sistema (versión Basic o Advanced) 
+          que disponga de dicha conectividad y funcione como nodo de enlace.
+
+          La disponibilidad de la transmisión depende de la conectividad a Internet 
+          existente en el lugar de instalación.
         </p>
       </div>
     </section>

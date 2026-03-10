@@ -1093,3 +1093,102 @@ ul li {
   justify-content: center;
   margin-top: 25px;
 }
+
+
+.tech-note{
+  margin-top:30px;
+  padding:16px 20px;
+
+  background: rgba(255,255,255,0.04);
+  border-left:3px solid rgba(255,255,255,0.25);
+
+  font-size:0.85rem;
+  color:#c7cbd1;
+  line-height:1.5;
+  max-width:900px;
+}
+
+.tech-note p {
+  margin-bottom: 8px;
+  font-size:0.85rem;
+}
+
+.tech-note strong{
+  display:block;
+  margin-bottom:8px;
+  color:#0f2d52;
+  font-size:0.9rem;
+}
+
+.note-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #0f2d52,
+    transparent
+  );
+  margin: 45px 0 20px 0;
+}
+
+/* TOOLTIP LEGAL */
+
+.tooltip{
+  position:relative;
+  display:inline-block;
+  cursor:help;
+  color:#ffd24a;
+  font-weight:600;
+}
+
+.tooltip-text{
+  visibility:hidden;
+
+  width:260px;
+
+  background:#0b1c2e;
+  color:#ffffff;
+
+  text-align:left;
+  padding:10px 12px;
+  border-radius:6px;
+
+  position:absolute;
+  z-index:1000;
+
+  bottom:140%;
+  left:50%;
+  transform:translateX(-50%);
+
+  font-size:0.8rem;
+  line-height:1.4;
+
+  box-shadow:0 6px 16px rgba(0,0,0,0.35);
+
+  opacity:0;
+  transition:opacity 0.2s ease;
+}
+
+/* flecha */
+
+.tooltip-text::after{
+  content:"";
+  position:absolute;
+
+  top:100%;
+  left:50%;
+  transform:translateX(-50%);
+
+  border-width:6px;
+  border-style:solid;
+
+  border-color:#0b1c2e transparent transparent transparent;
+}
+
+/* activación */
+
+.tooltip:hover .tooltip-text{
+  visibility:visible;
+  opacity:1;
+}
