@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Botón de Auxilio Colaborativo | Solicitud de auxilio con micro-ubicación</title>
-  <meta name="description" content="Sistema de solicitud de auxilio física con micro-ubicación precisa. Diseñado para universidades, industria y espacios con protocolos de seguridad institucional.">
+  <meta name="description" content="Sistema de solicitud de auxilio física con micro-ubicación configurada. Diseñado para universidades, industria y espacios con protocolos de seguridad institucional.">
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -243,8 +243,14 @@
       <p class="note">
         Los tiempos mostrados a continuación representan el intervalo
         desde el momento en que una persona intenta solicitar ayuda
-        hasta que el personal de seguridad cuenta con la ubicación exacta
-        del evento para iniciar la atención.
+        hasta que el personal de seguridad cuenta con la ubicación configurada
+        <span class="tooltip">
+          *
+          <span class="tooltip-text">
+            La precisión de la ubicación depende de la correcta configuración inicial
+            del dispositivo (dirección, coordenadas GPS o punto de instalación).
+          </span>
+        </span> del evento para iniciar la atención.
       </p>
     
       <div class="timer-grid">
@@ -344,7 +350,7 @@
       <h2>Una tecnología, múltiples sectores</h2>
       <p>
         El Botón de Auxilio Colaborativo es una infraestructura tecnológica
-        diseñada para adaptarse a distintos entornos donde la ubicación precisa
+        diseñada para adaptarse a distintos entornos donde la ubicación 
         y la activación inmediata del sistema son críticas.
       </p>
     
@@ -404,12 +410,12 @@
           edificios gubernamentales y comunidades.
           El sistema permite recibir solicitudes de auxilio con ubicación configurada
           <span class="tooltip">
-              *
-              <span class="tooltip-text">
-                La precisión de la ubicación depende de la correcta configuración inicial
-                del dispositivo (dirección, coordenadas GPS o punto de instalación).
-              </span>
-            </span> y visualización operativa en tiempo real para atención inmediata.
+            *
+            <span class="tooltip-text">
+              La precisión de la ubicación depende de la correcta configuración inicial
+              del dispositivo (dirección, coordenadas GPS o punto de instalación).
+            </span>
+          </span> y visualización operativa en tiempo real para atención inmediata.
         </p>
       </div>
 
@@ -469,7 +475,14 @@
       <p>
         Esto elimina la ambigüedad en la activación, reduce la carga cognitiva del
         ciudadano y transfiere el análisis, clasificación y despacho del evento al centro
-        de monitoreo C4/C5, con información de ubicación precisa desde el primer segundo.
+        de monitoreo C4/C5, con información de ubicación configurada
+        <span class="tooltip">
+          *
+          <span class="tooltip-text">
+            La precisión de la ubicación depende de la correcta configuración inicial
+            del dispositivo (dirección, coordenadas GPS o punto de instalación).
+          </span>
+        </span> desde el primer segundo.
       </p>
     </section>
 
@@ -479,13 +492,27 @@
       <p>
         El Botón de Auxilio Colaborativo es un dispositivo físico dedicado que permite
         activar una solicitud de auxilio de forma inmediata, enviando automáticamente la
-        alerta junto con la micro-ubicación exacta del punto de activación hacia el centro
-        de monitoreo C4/C5 o sistema institucional de seguridad pública.
+        alerta junto con la micro-ubicación configurada del punto de activación
+        <span class="tooltip">
+          *
+          <span class="tooltip-text">
+            La precisión de la ubicación depende de la correcta configuración inicial
+            del dispositivo (dirección, coordenadas GPS o punto de instalación).
+          </span>
+        </span> hacia el centro de monitoreo C4/C5 o sistema institucional de seguridad pública.
       </p>
       <ul>
         <li>Activación física inmediata, sin dependencia de teléfonos móviles</li>
         <li>Envío automático de la solicitud de auxilio</li>
-        <li>Identificación exacta del punto de activación (micro-ubicación)</li>
+        <li>Identificación configurada del punto de activación (micro-ubicación)
+          <span class="tooltip">
+            *
+            <span class="tooltip-text">
+              La precisión de la ubicación depende de la correcta configuración inicial
+              del dispositivo (dirección, coordenadas GPS o punto de instalación).
+            </span>
+          </span> 
+        </li>
         <li>Recepción y visualización centralizada en C4 / C5</li>
       </ul>
     </section>
@@ -503,48 +530,72 @@
 
       <div class="table-container">
         <table class="comparison-table">
+
           <thead>
             <tr>
-              <th>Característica</th>
+              <th>Capacidad del sistema</th>
               <th>Apps móviles</th>
               <th>Sirenas tradicionales</th>
               <th class="highlight-col">Botón Colaborativo</th>
             </tr>
           </thead>
+
           <tbody>
+
             <tr>
-              <td>Activación del sistema</td>
-              <td>Condicionada</td>
+              <td>Activación de la alerta</td>
+              <td>Depende del uso del teléfono</td>
               <td>Inmediata</td>
-              <td class="highlight-col">Inmediata</td>
+              <td class="highlight-col">Inmediata (botón físico dedicado)</td>
             </tr>
+
             <tr>
-              <td>Información de ubicación</td>
-              <td>General / variable</td>
+              <td>Información de ubicación del evento</td>
+              <td>Variable (GPS del dispositivo)</td>
               <td>No disponible</td>
-              <td class="highlight-col">Precisa (micro-ubicación)</td>
+              <td class="highlight-col">Micro-ubicación configurada
+                <span class="tooltip">
+                  *
+                  <span class="tooltip-text">
+                    La precisión de la ubicación depende de la correcta configuración inicial
+                    del dispositivo (dirección, coordenadas GPS o punto de instalación).
+                  </span>
+                </span>
+              </td>
             </tr>
+
             <tr>
-              <td>Identificación del origen</td>
-              <td>Parcial</td>
-              <td>Ambigua</td>
-              <td class="highlight-col">Exacta</td>
+              <td>Identificación del origen de la alerta</td>
+              <td>Parcial (usuario / GPS)</td>
+              <td>No identificable (solo señal sonora)</td>
+              <td class="highlight-col">Si (según configuración del dispositivo 
+                <span class="tooltip">
+                  *
+                  <span class="tooltip-text">
+                    La precisión de la ubicación depende de la correcta configuración inicial
+                    del dispositivo (dirección, coordenadas GPS o punto de instalación).
+                  </span>
+                </span>)
+              </td>
             </tr>
+
             <tr>
-              <td>Dependencia del usuario</td>
+              <td>Dependencia de interacción del usuario</td>
               <td>Alta</td>
               <td>Baja</td>
               <td class="highlight-col">Mínima</td>
             </tr>
+
             <tr>
-              <td>Integración institucional</td>
-              <td>Limitada</td>
-              <td>Básica</td>
-              <td class="highlight-col">Total</td>
+              <td>Sistema de monitoreo de alertas</td>
+              <td>No incluido</td>
+              <td>No disponible</td>
+              <td class="highlight-col">Incluido (panel web de monitoreo)</td>
             </tr>
+
           </tbody>
         </table>
-      </div>
+        </div>
     </section>
 
     <!-- TIEMPO CRÍTICO -->
@@ -552,8 +603,14 @@
       <h2>El tiempo como factor crítico</h2>
       <p>
         Los tiempos indicados representan el intervalo desde que una persona intenta
-        solicitar ayuda hasta que el personal de seguridad cuenta con la ubicación exacta
-        del evento para iniciar la atención.
+        solicitar ayuda hasta que el personal de seguridad cuenta con la ubicación configurada
+        <span class="tooltip">
+          *
+          <span class="tooltip-text">
+            La precisión de la ubicación depende de la correcta configuración inicial
+            del dispositivo (dirección, coordenadas GPS o punto de instalación).
+          </span>
+        </span> del evento para iniciar la atención.
       </p>
 
       <div class="timer-grid">
@@ -579,8 +636,14 @@
           <h3>Botón de Auxilio Colaborativo</h3>
           <p class="time">&lt; 10 s</p>
           <p class="description">
-            Activación física inmediata con envío automático de micro-ubicación exacta al
-            centro de monitoreo.
+            Activación física inmediata con envío automático de micro-ubicación configurada
+            <span class="tooltip">
+              *
+              <span class="tooltip-text">
+                La precisión de la ubicación depende de la correcta configuración inicial
+                del dispositivo (dirección, coordenadas GPS o punto de instalación).
+              </span>
+            </span> al centro de monitoreo.
           </p>
         </div>
       </div>
@@ -598,20 +661,32 @@
     <section class="section gray">
       <h2>Micro-ubicación configurable</h2>
       <p>
-        Cada dispositivo se configura previamente con su ubicación específica dentro del
-        entorno a proteger, por ejemplo:
+        Cada dispositivo se configura previamente con su ubicación específica 
+        <span class="tooltip">
+          *
+          <span class="tooltip-text">
+            La precisión de la ubicación depende de la correcta configuración inicial
+            del dispositivo (dirección, coordenadas GPS o punto de instalación).
+          </span>
+        </span> dentro del entorno a proteger, por ejemplo:
       </p>
       <ul>
-        <li>Espacio o área</li>
-        <li>Pasillo o sección</li>
-        <li>Nivel o zona</li>
-        <li>Punto crítico definido por la institución</li>
+        <li>Dirección configurada del dispositivo (calle, número exterior e interior)</li>
+        <li>Colonia y municipio del punto de instalación</li>
+        <li>Coordenadas geográficas del evento (latitud y longitud)</li>
+        <li>Identificación del tipo de ubicación o aplicación del dispositivo (escuela, comercio, paradero, etc.)</li>
       </ul>
 
       <p>
         La precisión no depende del GPS del usuario ni de descripciones verbales bajo
         estrés. Esto permite a los centros C4/C5 despachar unidades con mayor exactitud
-        desde el primer momento.
+        <span class="tooltip">
+          *
+          <span class="tooltip-text">
+            La precisión de la ubicación depende de la correcta configuración inicial
+            del dispositivo (dirección, coordenadas GPS o punto de instalación).
+          </span>
+        </span> desde el primer momento.
       </p>
 
       <p class="sector-cross">
@@ -678,6 +753,29 @@
           Ponte en contacto
         </button>
       </div>
+
+      <hr class="note-divider">
+
+      <div class="tech-note">
+        <strong>Condiciones técnicas del sistema</strong>
+        <p>
+          * La micro-ubicación mostrada en el sistema depende de la correcta
+          configuración inicial del dispositivo, incluyendo la dirección,
+          coordenadas GPS o punto de instalación definidos durante el proceso
+          de configuración. Una configuración incorrecta puede afectar la
+          precisión de la ubicación mostrada en el sistema de monitoreo.
+        </p>
+
+        <p>
+          ** La transmisión de la solicitud de auxilio requiere conectividad a Internet. 
+          La conexión puede establecerse mediante una red Wi-Fi con acceso a Internet 
+          o a través de un dispositivo cercano del sistema (versión Basic o Advanced) 
+          que disponga de dicha conectividad y funcione como nodo de enlace.
+
+          La disponibilidad de la transmisión depende de la conectividad a Internet 
+          existente en el lugar de instalación.
+        </p>
+      </div>
     </section>
   </div>
   
@@ -686,12 +784,19 @@
     <section class="section">
       <h2>Sector Industrial / Residencial</h2>
       <p>
-        <strong>Sistema físico de auxilio con micro-ubicación precisa para seguridad privada,
+        <strong>Sistema físico de auxilio con micro-ubicación configurada para seguridad privada,
         industrial y residencial.</strong>
       </p>
       <p>
         Infraestructura de auxilio diseñada para enviar solicitudes de ayuda en segundos,
-        proporcionando ubicación exacta del evento e integrándose a protocolos de seguridad
+        proporcionando ubicación configurada
+        <span class="tooltip">
+          *
+          <span class="tooltip-text">
+            La precisión de la ubicación depende de la correcta configuración inicial
+            del dispositivo (dirección, coordenadas GPS o punto de instalación).
+          </span>
+        </span> del evento e integrándose a protocolos de seguridad
         privada, industrial y residencial con control de acceso.
       </p>
     </section>
@@ -729,8 +834,14 @@
       </p>
       <p>
         Esto permite que la activación sea inmediata y que el análisis y atención del evento
-        se realicen desde el centro de monitoreo con información de ubicación precisa desde
-        el primer momento.
+        se realicen desde el centro de monitoreo con información de ubicación precisa 
+        <span class="tooltip">
+          *
+          <span class="tooltip-text">
+            La precisión de la ubicación depende de la correcta configuración inicial
+            del dispositivo (dirección, coordenadas GPS o punto de instalación).
+          </span>
+        </span> desde el primer momento.
       </p>
     </section>
 
@@ -740,13 +851,27 @@
       <p>
         El Botón de Auxilio Colaborativo es un dispositivo físico dedicado que permite activar
         una solicitud de auxilio mediante una acción simple, enviando automáticamente la alerta
-        junto con la micro-ubicación exacta hacia un sistema central de seguridad privada
-        o industrial.
+        junto con la micro-ubicación configurada
+        <span class="tooltip">
+          *
+          <span class="tooltip-text">
+            La precisión de la ubicación depende de la correcta configuración inicial
+            del dispositivo (dirección, coordenadas GPS o punto de instalación).
+          </span>
+        </span> hacia un sistema central de seguridad privada o industrial.
       </p>
       <ul>
         <li>Activación física inmediata, sin dependencia de teléfonos móviles</li>
         <li>Envío automático de la solicitud de auxilio</li>
-        <li>Identificación exacta del punto de activación (micro-ubicación)</li>
+        <li>Identificación configurada del punto de activación (micro-ubicación)
+          <span class="tooltip">
+            *
+            <span class="tooltip-text">
+              La precisión de la ubicación depende de la correcta configuración inicial
+              del dispositivo (dirección, coordenadas GPS o punto de instalación).
+            </span>
+          </span> 
+        </li>
         <li>Recepción y visualización centralizada a nivel operativo</li>
       </ul>
     </section>
@@ -836,7 +961,14 @@
           <h3>Botón de Auxilio Colaborativo</h3>
           <p class="time">&lt; 10 s</p>
           <p class="description">
-            Activación inmediata con envío automático de micro-ubicación exacta.
+            Activación inmediata con envío automático de micro-ubicación configurada
+            <span class="tooltip">
+              *
+              <span class="tooltip-text">
+                La precisión de la ubicación depende de la correcta configuración inicial
+                del dispositivo (dirección, coordenadas GPS o punto de instalación).
+              </span>
+            </span>.
           </p>
         </div>
       </div>
@@ -1203,7 +1335,14 @@
         <h3>Ventajas Competitivas</h3>
         <ul>
           <li>Cero fricción operativa.</li>
-          <li>Micro-ubicación exacta pre-cargada.</li>
+          <li>Micro-ubicación configurada
+            <span class="tooltip">
+            *
+              <span class="tooltip-text">
+                La precisión de la ubicación depende de la correcta configuración inicial
+                del dispositivo (dirección, coordenadas GPS o punto de instalación).
+              </span>
+            </span> pre-cargada.</li>
           <li>Arquitectura colaborativa redundante.</li>
           <li>Arranque automático al encender.</li>
         </ul>
