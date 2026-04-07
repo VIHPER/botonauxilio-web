@@ -5,6 +5,10 @@ body {
   line-height: 1.6;
 }
 
+body, html {
+  overflow-x: hidden; 
+}
+
 /* HERO */
 .hero {
   background: #0b1f33;
@@ -238,13 +242,13 @@ ul li {
 
 
 /* IMAGEN */
-.product-image img {
+/*.product-image img {
   width: 100%;
-  max-width: 500px;   /* controla el tamaño visual */
+  max-width: 500px;   
   height: auto;
   border-radius: 6px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
+}*/
 
 /* TEXTO DE REFERENCIA (LEGAL / CONCEPTUAL) */
 .product-image figcaption {
@@ -264,6 +268,7 @@ ul li {
 /* 1. Configuración base para computadoras (Laptop/Desktop) */
 .zoom-diagram {
   transition: transform 0.3s ease; /* Hace que el crecimiento sea suave */
+  cursor: zoom-in; /* Indica al usuario que se puede agrandar */
 }
 
 .zoom-diagram:hover {
@@ -275,14 +280,31 @@ ul li {
   transform-origin: center; 
 }
 
-/* 2. Ajuste específico para Celulares (Pantallas menores a 768px) */
-@media (max-width: 767px) {
+/* Configuración para Laptop */
+@media (min-width: 768px) {
   .zoom-diagram:hover {
-    /* Cambiamos el origen: la imagen crecerá hacia la derecha y abajo */
-    transform-origin: top left; 
-    
-    /* Opcional: Si notas que 1.8 es mucho para celular, puedes ajustarlo aquí */
-    transform: scale(1.8); 
+    transform: scale(1.8);
+    position: relative;
+    z-index: 100;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    transform-origin: center; 
+  }
+}
+
+/* Configuración para Celular */
+@media (max-width: 767px) {
+  /* Forzamos que la imagen no se salga antes de tocarla */
+  .product-figure, .product-image {
+    max-width: 100%;
+    overflow: visible; /* Permite que el zoom funcione */
+  }
+
+  .zoom-diagram:active, .zoom-diagram:hover {
+    transform: scale(1.8);
+    position: relative;
+    z-index: 100;
+    /* Al usar 'left center' evitamos que se salga por la izquierda */
+    transform-origin: left center; 
   }
 }
 
@@ -1052,6 +1074,17 @@ ul li {
 .product-figure {
   margin: 40px 0;
   text-align: center;
+}
+
+.product-image img, 
+.product-figure img {
+  width: 100%;       /* Ocupa el ancho de la pantalla en celular */
+  max-width: 500px;   /* Pero no más de 500px en laptop */
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  display: block;     /* Evita espacios en blanco extraños */
+  margin: 0 auto;    /* Centra la imagen */
 }
 
 .product-image-main {
