@@ -261,21 +261,29 @@ ul li {
   margin: 20px 0;
 }
 
+/* 1. Configuración base para computadoras (Laptop/Desktop) */
 .zoom-diagram {
-  width: 100%;           /* Se ajusta al ancho del contenedor original */
-  max-width: 600px;      /* Tamaño base en pantalla */
-  transition: transform 0.4s cubic-bezier(0.25, 0.45, 0.45, 0.95); /* Animación suave */
-  cursor: zoom-in;
-  border-radius: 8px;    /* Opcional: bordes redondeados */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease; /* Hace que el crecimiento sea suave */
 }
 
-/* Efecto al pasar el mouse (Hover) */
 .zoom-diagram:hover {
-  transform: scale(1.8); /* Agrandar al 180% para leer bien los textos LoRa */
+  transform: scale(1.8);
   position: relative;
-  z-index: 100;          /* Asegura que quede por encima de todo el texto */
-  box-shadow: 0 15px 35px rgba(0,0,0,0.4); /* Sombra para dar profundidad */
+  z-index: 100;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  /* En laptop se mantiene el crecimiento desde el centro */
+  transform-origin: center; 
+}
+
+/* 2. Ajuste específico para Celulares (Pantallas menores a 768px) */
+@media (max-width: 767px) {
+  .zoom-diagram:hover {
+    /* Cambiamos el origen: la imagen crecerá hacia la derecha y abajo */
+    transform-origin: top left; 
+    
+    /* Opcional: Si notas que 1.8 es mucho para celular, puedes ajustarlo aquí */
+    transform: scale(1.8); 
+  }
 }
 
 /* BRANDING */
