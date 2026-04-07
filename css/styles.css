@@ -231,7 +231,7 @@ ul li {
 
 /* CONTENEDOR DE IMÁGENES DE PRODUCTO */
 .product-image {
-  margin: 20px auto;
+  margin: 20px 0;
   text-align: center;
   overflow: visible !important;
   width: 100%;
@@ -239,28 +239,12 @@ ul li {
 }
 
 
-/* IMAGEN */
-/*.product-image img {
-  width: 100%;
-  max-width: 500px;   
-  height: auto;
-  border-radius: 6px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}*/
-
 /* TEXTO DE REFERENCIA (LEGAL / CONCEPTUAL) */
 .product-image figcaption {
   margin-top: 10px;
   font-size: 0.85rem;
   color: #555;
   font-style: italic;
-}
-
-/* Contenedor para evitar que el zoom mueva otros elementos */
-.product-image {
-  overflow: visible; /* Permite que la imagen sobresalga al agrandarse */
-  text-align: center;
-  margin: 20px 0;
 }
 
 /* 1. Configuración base para computadoras (Laptop/Desktop) */
@@ -293,7 +277,6 @@ ul li {
 @media (max-width: 767px) {
   
   /* 1. Preparamos los contenedores para que no corten la imagen */
-  .product-image, 
   .product-figure, 
   .diagram-figure {
     overflow: visible !important; /* Vital para que el zoom no se corte */
