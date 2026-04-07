@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Botón de Auxilio Colaborativo | Solicitud de auxilio con micro-ubicación</title>
-  <meta name="description" content="Sistema de solicitud de auxilio física con micro-ubicación configurada. Diseñado para universidades, industria y espacios con protocolos de seguridad institucional.">
+  <meta name="description" content="Sistema de solicitud de auxilio física con referencia de ubicación configurada. Diseñado para universidades, industria y espacios con protocolos de seguridad institucional.">
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -18,7 +18,7 @@
         <img src="img/Logo-VIHPER.png" alt="VIHPER">
       </div>
 
-      <h1>Sistema físico de solicitud de auxilio con micro-ubicación configurada</h1>
+      <h1>Sistema físico de solicitud de auxilio con referencia de ubicación configurada</h1>
       <p class="slogan">
         Tu seguridad, en un solo toque
       </p>
@@ -63,6 +63,10 @@
               Gobierno / C4-C5
             </button>
 
+            <button class="sub-tab" data-sector="sector-com">
+              Comercial / Centros Comerciales
+            </button>
+
             <button class="sub-tab" data-sector="sector-ind">
               Industrial / Residencial
             </button>
@@ -87,7 +91,7 @@
             </button>
 
             <button class="sub-tab" data-sector="producto-control-general">
-              Control General
+              Centro de Control y Monitoreo (CCM)
             </button>
           </div>
         
@@ -109,13 +113,13 @@
         o sirenas analógicas— introducen retrasos operativos por distintas razones:
         interacción manual bajo estrés, dependencia de dispositivos personales,
         comunicación ambigua de la ubicación o activaciones que no transmiten
-        información precisa del punto de origen.
+        información de referencia del punto de origen.
       </p>
     </section>
     
     <figure class="product-image">
       <img src="img/boton-auxilio.png" alt="Botón de Auxilio Colaborativo">
-      <figcaption>Dispositivo físico de activación inmediata. Imagen de referencia conceptual.</figcaption>
+      <figcaption>Dispositivo de activación de un solo pulso. Imagen de referencia conceptual.</figcaption>
     </figure>
 
     <section class="section">
@@ -124,7 +128,8 @@
         <li>Emergencias en sanitarios, aulas, pasillos y estacionamientos</li>
         <li>Agresiones contra estudiantes y personal académico</li>
         <li>Limitaciones operativas de sirenas y botones analógicos</li>
-        <li>Necesidad de respuesta inmediata ante solicitudes de auxilio dentro del campus</li>
+        <li>Reducción de los intervalos de notificación y entrega de datos de ubicación hacia el Centro de Control</li>
+        <li>Notificación georreferenciada para facilitar el despliegue oportuno del personal de seguridad interna</li>
       </ul>
     </section>
     
@@ -147,7 +152,7 @@
           <tbody>
 
             <tr>
-              <td>Activación física inmediata de la alerta</td>
+              <td>Activación física de un solo toque de la alerta</td>
               <td>No (requiere usar el teléfono)</td>
               <td>Sí</td>
               <td class="highlight-col">Sí</td>
@@ -165,19 +170,19 @@
               <td>Limitada (GPS del teléfono)</td>
               <td>No disponible</td>
               <td class="highlight-col">
-                Sí (micro-ubicación configurada
+                Sí (referencia de ubicación configurada
                 <span class="tooltip">
                   *
                   <span class="tooltip-text">
                   La precisión de la ubicación depende de la correcta configuración inicial
                   del dispositivo (dirección, coordenadas GPS o punto de instalación).
                   </span>
-                </span>)
+                </span> )
               </td>
             </tr>
 
             <tr>
-              <td>Identificación del origen exacto de la alerta</td>
+              <td>Identificación del origen configurado de la alerta</td>
               <td>Limitada (depende del usuario)</td>
               <td>No (solo señal sonora)</td>
               <td class="highlight-col">
@@ -188,12 +193,14 @@
                   La precisión de la ubicación depende de la correcta configuración inicial
                   del dispositivo (dirección, coordenadas GPS o punto de instalación).
                   </span>
-                </span>)
+                </span> )
               </td>
             </tr>
 
             <tr>
-              <td>Notificación de auxilio al centro de monitoreo</td>
+              <td>Notificación de auxilio al Centro de Control y Monitoreo (
+                <span class="inline-sector-link product-ref" data-sector="producto-control-general">CCM</span> )
+              </td>
 
               <td>Sí (requiere conexión del teléfono)</td>
 
@@ -226,9 +233,9 @@
       <h2>El tiempo es el factor crítico</h2>
       
       <figure class="product-image">
-        <img src="img/receptor-institucional.png" alt="Dispositivo institucional de recepción">
+        <img src="img/receptor-institucional.png" alt="Dispositivo CCM institucional de recepción">
         <figcaption>
-          Dispositivo institucional de recepción y gestión de solicitudes de auxilio con micro-ubicación.
+          Dispositivo CCM institucional de recepción y gestión de solicitudes de auxilio con micro-ubicación.
           Imagen de referencia conceptual.
         </figcaption>
       </figure>
@@ -243,7 +250,7 @@
       <p class="note">
         Los tiempos mostrados a continuación representan el intervalo
         desde el momento en que una persona intenta solicitar ayuda
-        hasta que el personal de seguridad cuenta con la ubicación configurada
+        hasta que el personal de despacho visualiza los datos de ubicación de referencia 
         <span class="tooltip">
           *
           <span class="tooltip-text">
@@ -277,8 +284,9 @@
           <h3>Botón de Auxilio Colaborativo</h3>
           <p class="time">&lt; 10 s</p>
           <p class="description">
-            Activación física inmediata.
-            Ubicación configurada enviada al sistema de monitoreo
+            Activación física por pulsación.
+            Datos de ubicación configurados enviados al Centro de Control y Monitoreo (
+            <span class="inline-sector-link product-ref" data-sector="producto-control-general">CCM</span> )
             <span class="tooltip">
               *
               <span class="tooltip-text">
@@ -349,9 +357,9 @@
     <section class="section">
       <h2>Una tecnología, múltiples sectores</h2>
       <p>
-        El Botón de Auxilio Colaborativo es una infraestructura tecnológica
-        diseñada para adaptarse a distintos entornos donde la ubicación 
-        y la activación inmediata del sistema son críticas.
+        El Botón de Auxilio Colaborativo es una infraestructura tecnológica 
+        diseñada para adaptarse a distintos entornos donde la precisión de 
+        ubicación y la agilidad en la transmisión del evento son críticas.
       </p>
     
       <!-- SECTOR EDUCATIVO -->
@@ -400,22 +408,46 @@
         </p>
       </div>
       
+      <!-- SECTOR COMERCIAL -->
+      <div class="sector-block">
+        <h3 class="sector-link" data-sector="sector-com">
+          Sector Comercial / Centros Comerciales
+        </h3>
+        <p>
+          Diseñado para centros comerciales con seguridad privada donde locatarios
+          y visitantes pueden enfrentar situaciones que requieren apoyo inmediato.
+          El sistema permite solicitar ayuda desde locales comerciales, pasillos,
+          sanitarios o estacionamientos, enviando una alerta con la ubicación
+          configurada
+          <span class="tooltip">
+            *
+            <span class="tooltip-text">
+              La precisión de la ubicación depende de la correcta configuración inicial
+              del dispositivo (local, pasillo, zona o punto de instalación).
+            </span>
+          </span>
+          hacia el Centro de Control y Monitoreo (
+          <span class="inline-sector-link product-ref" data-sector="producto-control-general">CCM</span> ) del centro comercial.
+        </p>
+      </div>
+
       <!-- SECTOR GOBIERNO -->
       <div class="sector-block">
         <h3 class="sector-link" data-sector="sector-gov">
           Sector Ciudadano y Gobierno
         </h3>
         <p>
-          Integrable a centros de monitoreo C4 y C5, espacios públicos,
-          edificios gubernamentales y comunidades.
-          El sistema permite recibir solicitudes de auxilio con ubicación configurada
+          Diseñado para la convivencia operativa en centros de monitoreo C4 y C5, 
+          espacios públicos, edificios gubernamentales y comunidades. 
+          El sistema permite la recepción de solicitudes de auxilio con ubicación 
           <span class="tooltip">
             *
             <span class="tooltip-text">
-              La precisión de la ubicación depende de la correcta configuración inicial
+              La precisión de la ubicación depende de la correcta configuración inicial 
               del dispositivo (dirección, coordenadas GPS o punto de instalación).
             </span>
-          </span> y visualización operativa en tiempo real para atención inmediata.
+          </span> 
+          mediante una terminal de visualización web dedicada que facilita la gestión del evento.
         </p>
       </div>
 
@@ -452,14 +484,14 @@
         En entornos urbanos, espacios públicos y zonas de alta afluencia, los segundos
         son determinantes. Los mecanismos tradicionales de solicitud de auxilio, como
         llamadas telefónicas, reportes verbales o alarmas sonoras, generan retrasos
-        operativos por la falta de información precisa sobre la ubicación exacta del
+        operativos por la falta de referencias técnicas sobre el punto de origen del
         evento y por la dependencia de comunicación humana bajo estrés.
       </p>
       <ul>
         <li>Información incompleta o imprecisa del punto de auxilio</li>
         <li>Saturación de líneas telefónicas y entrevistas iniciales</li>
         <li>Alertas sin datos claros de localización</li>
-        <li>Dificultad para despachar unidades con precisión desde el primer momento</li>
+        <li>Dificultad para gestionar el despacho con datos de ubicación específicos desde el primer momento</li>
       </ul>
     </section>
 
@@ -474,8 +506,9 @@
       </p>
       <p>
         Esto elimina la ambigüedad en la activación, reduce la carga cognitiva del
-        ciudadano y transfiere el análisis, clasificación y despacho del evento al centro
-        de monitoreo C4/C5, con información de ubicación configurada
+        ciudadano y transfiere el análisis, clasificación y despacho del evento al Centro
+        de Control y Monitoreo (
+          <span class="inline-sector-link product-ref" data-sector="producto-control-general">CCM</span> ), con datos de georreferenciación configurados 
         <span class="tooltip">
           *
           <span class="tooltip-text">
@@ -491,18 +524,19 @@
       <h2>La solución institucional</h2>
       <p>
         El Botón de Auxilio Colaborativo es un dispositivo físico dedicado que permite
-        activar una solicitud de auxilio de forma inmediata, enviando automáticamente la
-        alerta junto con la micro-ubicación configurada del punto de activación
+        activar una solicitud de auxilio con un solo toque, iniciando el envío automático de la
+        alerta junto con los datos de ubicación registrados del punto de activación
         <span class="tooltip">
           *
           <span class="tooltip-text">
             La precisión de la ubicación depende de la correcta configuración inicial
             del dispositivo (dirección, coordenadas GPS o punto de instalación).
           </span>
-        </span> hacia el centro de monitoreo C4/C5 o sistema institucional de seguridad pública.
+        </span> hacia el Centro de Control y Monitoreo (
+          <span class="inline-sector-link product-ref" data-sector="producto-control-general">CCM</span> ) o sistema institucional de seguridad pública.
       </p>
       <ul>
-        <li>Activación física inmediata, sin dependencia de teléfonos móviles</li>
+        <li>Activación física de un solo paso, operando sin necesidad de teléfonos móviles</li>
         <li>Envío automático de la solicitud de auxilio</li>
         <li>Identificación configurada del punto de activación (micro-ubicación)
           <span class="tooltip">
@@ -513,14 +547,16 @@
             </span>
           </span> 
         </li>
-        <li>Recepción y visualización centralizada en C4 / C5</li>
+        <li>Recepción y visualización centralizada en el Centro de Control y Monitoreo (
+          <span class="inline-sector-link product-ref" data-sector="producto-control-general">CCM</span> )
+        </li>
       </ul>
     </section>
 
     <figure class="product-image">
       <img src="img/boton-auxilio.png" alt="Botón de Auxilio Colaborativo">
       <figcaption>
-        Dispositivo físico de activación inmediata. Imagen de referencia conceptual.
+        Dispositivo de activación de un solo pulso. Imagen de referencia conceptual.
       </figcaption>
     </figure>
 
@@ -546,14 +582,14 @@
               <td>Activación de la alerta</td>
               <td>Depende del uso del teléfono</td>
               <td>Inmediata</td>
-              <td class="highlight-col">Inmediata (botón físico dedicado)</td>
+              <td class="highlight-col">Inmediata (Hardware de acción única con Ficha Operativa)</td>
             </tr>
 
             <tr>
               <td>Información de ubicación del evento</td>
               <td>Variable (GPS del dispositivo)</td>
               <td>No disponible</td>
-              <td class="highlight-col">Micro-ubicación configurada
+              <td class="highlight-col">Referencia de la ubicación configurada
                 <span class="tooltip">
                   *
                   <span class="tooltip-text">
@@ -568,14 +604,14 @@
               <td>Identificación del origen de la alerta</td>
               <td>Parcial (usuario / GPS)</td>
               <td>No identificable (solo señal sonora)</td>
-              <td class="highlight-col">Si (según configuración del dispositivo 
+              <td class="highlight-col">Sí (según registro del dispositivo 
                 <span class="tooltip">
                   *
                   <span class="tooltip-text">
                     La precisión de la ubicación depende de la correcta configuración inicial
                     del dispositivo (dirección, coordenadas GPS o punto de instalación).
                   </span>
-                </span>)
+                </span> )
               </td>
             </tr>
 
@@ -603,7 +639,7 @@
       <h2>El tiempo como factor crítico</h2>
       <p>
         Los tiempos indicados representan el intervalo desde que una persona intenta
-        solicitar ayuda hasta que el personal de seguridad cuenta con la ubicación configurada
+        solicitar ayuda hasta que el personal de despacho visualiza los datos de ubicación de referencia 
         <span class="tooltip">
           *
           <span class="tooltip-text">
@@ -636,23 +672,24 @@
           <h3>Botón de Auxilio Colaborativo</h3>
           <p class="time">&lt; 10 s</p>
           <p class="description">
-            Activación física inmediata con envío automático de micro-ubicación configurada
+            Activación física de un solo toque con envío automático de referencia de ubicación configurada
             <span class="tooltip">
               *
               <span class="tooltip-text">
                 La precisión de la ubicación depende de la correcta configuración inicial
                 del dispositivo (dirección, coordenadas GPS o punto de instalación).
               </span>
-            </span> al centro de monitoreo.
+            </span> al Centro de Control y Monitoreo (
+            <span class="inline-sector-link product-ref" data-sector="producto-control-general">CCM</span> ).
           </p>
         </div>
       </div>
     </section>
 
     <figure class="product-image">
-      <img src="img/receptor-institucional.png" alt="Dispositivo institucional de recepción">
+      <img src="img/receptor-institucional.png" alt="Dispositivo CCM institucional de recepción">
       <figcaption>
-        Dispositivo institucional de recepción y gestión de solicitudes de auxilio con micro-ubicación.
+        Dispositivo CCM institucional de recepción y gestión de solicitudes de auxilio con micro-ubicación.
         Imagen de referencia conceptual.
       </figcaption>
     </figure>
@@ -679,7 +716,7 @@
 
       <p>
         La precisión no depende del GPS del usuario ni de descripciones verbales bajo
-        estrés. Esto permite a los centros C4/C5 despachar unidades con mayor exactitud
+        estrés. Esto permite a los centros C4/C5 gestionar el despacho con mayor certidumbre técnica
         <span class="tooltip">
           *
           <span class="tooltip-text">
@@ -715,7 +752,8 @@
         <p class="sector-note">
           Esta misma tecnología se adapta también a entornos
           <span class="inline-sector-link" data-sector="sector-edu">educativos</span>,
-          <span class="inline-sector-link" data-sector="sector-ind">industriales y residenciales</span>
+          <span class="inline-sector-link" data-sector="sector-ind">industriales / residenciales</span>,
+          <span class="inline-sector-link" data-sector="sector-com">centros comerciales</span>
           y a aplicaciones móviles para 
           <span class="inline-sector-link" data-sector="sector-movil">
             vehículos
@@ -730,8 +768,22 @@
       <h2>Contacto institucional</h2>
 
       <p>
-        Solicita información técnica, integración con centros de monitoreo,
-        una demostración funcional o un piloto controlado para tu institución.
+        Solicita información técnica, una demostración funcional o un piloto
+        controlado del sistema para tu institución.
+      </p>
+
+      <p>
+        El sistema dispone de una interfaz web de monitoreo que permite
+        visualizar los eventos activos generados por los dispositivos,
+        mostrando la georreferenciación configurada
+        <span class="tooltip">
+          *
+          <span class="tooltip-text">
+            La precisión de la ubicación depende de la correcta configuración
+            inicial del dispositivo durante su instalación.
+          </span>
+        </span>
+        y la información del punto de activación para su atención operativa.
       </p>
 
       <p>
@@ -777,19 +829,19 @@
         </p>
       </div>
     </section>
-  </div>
+  </div> <!-- cierre de sector-gov -->
   
   <div id="sector-ind" class="sector-content">
     <!-- INTRODUCCIÓN -->
     <section class="section">
       <h2>Sector Industrial / Residencial</h2>
       <p>
-        <strong>Sistema físico de auxilio con micro-ubicación configurada para seguridad privada,
+        <strong>Sistema físico de auxilio con referencia de ubicación configurada para seguridad privada,
         industrial y residencial.</strong>
       </p>
       <p>
         Infraestructura de auxilio diseñada para enviar solicitudes de ayuda en segundos,
-        proporcionando ubicación configurada
+        proporcionando datos de referencia de ubicación 
         <span class="tooltip">
           *
           <span class="tooltip-text">
@@ -807,15 +859,15 @@
       <p>
         En entornos industriales, corporativos y residenciales con seguridad privada,
         los segundos importan. Los mecanismos tradicionales —radio, teléfonos móviles,
-        sirenas o rondines manuales— generan retrasos operativos por la falta de información
-        precisa sobre la ubicación del evento y por la dependencia de comunicación verbal
+        sirenas o rondines manuales— generan retrasos operativos por la falta de datos
+        técnicos sobre el punto de origen del evento y por la dependencia de comunicación verbal
         bajo estrés.
       </p>
       <ul>
         <li>Información incompleta o imprecisa sobre el punto exacto del evento</li>
         <li>Dependencia de comunicación por radio o teléfono</li>
         <li>Activaciones de alerta sin datos operativos claros de localización</li>
-        <li>Recorridos físicos para localizar el origen dentro de áreas extensas</li>
+        <li>Patrullajes reactivos de búsqueda dentro de áreas extensas</li>
       </ul>
     </section>
 
@@ -833,8 +885,9 @@
         eliminando ambigüedad y reduciendo la carga cognitiva del usuario.
       </p>
       <p>
-        Esto permite que la activación sea inmediata y que el análisis y atención del evento
-        se realicen desde el centro de monitoreo con información de ubicación precisa 
+        Esto permite que la activación se realice en un solo paso y que el análisis y atención del evento
+        se realicen desde el Centro de Control y Monitoreo (
+        <span class="inline-sector-link product-ref" data-sector="producto-control-general">CCM</span> ) con la ficha de ubicación configurada  
         <span class="tooltip">
           *
           <span class="tooltip-text">
@@ -850,18 +903,19 @@
       <h2>La solución</h2>
       <p>
         El Botón de Auxilio Colaborativo es un dispositivo físico dedicado que permite activar
-        una solicitud de auxilio mediante una acción simple, enviando automáticamente la alerta
-        junto con la micro-ubicación configurada
+        una solicitud de auxilio mediante una acción simple, transmitiendo de forma automatizada la solicitud de auxilio 
+        y el registro de ubicación de origen
         <span class="tooltip">
           *
           <span class="tooltip-text">
             La precisión de la ubicación depende de la correcta configuración inicial
             del dispositivo (dirección, coordenadas GPS o punto de instalación).
           </span>
-        </span> hacia un sistema central de seguridad privada o industrial.
+        </span> hacia un Centro de Control y Monitoreo (
+        <span class="inline-sector-link product-ref" data-sector="producto-control-general">CCM</span> ) de seguridad privada o industrial.
       </p>
       <ul>
-        <li>Activación física inmediata, sin dependencia de teléfonos móviles</li>
+        <li>Activación física por pulsación, sin dependencia de teléfonos móviles</li>
         <li>Envío automático de la solicitud de auxilio</li>
         <li>Identificación configurada del punto de activación (micro-ubicación)
           <span class="tooltip">
@@ -879,7 +933,7 @@
     <figure class="product-image">
       <img src="img/boton-auxilio.png" alt="Botón de Auxilio Colaborativo">
       <figcaption>
-        Dispositivo físico de activación inmediata para entornos industriales,
+        Dispositivo de activación de un solo pulso para entornos industriales,
         corporativos y residenciales. Imagen de referencia conceptual.
       </figcaption>
     </figure>
@@ -900,22 +954,38 @@
           </thead>
           <tbody>
             <tr>
-              <td>Activación inmediata</td>
+              <td>Activación física de un solo toque</td>
               <td>No</td>
               <td>Sí</td>
               <td class="highlight-col">Sí</td>
             </tr>
             <tr>
-              <td>Información de ubicación</td>
+              <td>Ubicación del evento</td>
               <td>General / variable</td>
               <td>No disponible</td>
-              <td class="highlight-col">Precisa (micro-ubicación)</td>
+              <td class="highlight-col">Si (Referencia de ubicación configurada
+                <span class="tooltip">
+                  *
+                  <span class="tooltip-text">
+                    La precisión de la ubicación depende de la correcta configuración inicial
+                    del dispositivo (dirección, coordenadas GPS o punto de instalación).
+                  </span>
+                </span> )
+              </td>
             </tr>
             <tr>
-              <td>Identificación del origen</td>
+              <td>Identificación del origen de la alerta</td>
               <td>Parcial</td>
               <td>Ambigua</td>
-              <td class="highlight-col">Exacta</td>
+              <td class="highlight-col">Sí (Identificación por punto de registro
+                <span class="tooltip">
+                  *
+                  <span class="tooltip-text">
+                    La precisión de la ubicación depende de la correcta configuración inicial
+                    del dispositivo (dirección, coordenadas GPS o punto de instalación).
+                  </span>
+                </span> )
+              </td>
             </tr>
             <tr>
               <td>Dependencia del usuario</td>
@@ -924,10 +994,28 @@
               <td class="highlight-col">Mínima</td>
             </tr>
             <tr>
-              <td>Integración operativa</td>
-              <td>Limitada</td>
-              <td>Básica</td>
-              <td class="highlight-col">Total</td>
+              <td>Gestión de alerta en Centro de Control y Monitoreo (CCM)</td>
+
+              <td>Sí (requiere conexión del teléfono)</td>
+
+              <td>No</td>
+
+              <td class="highlight-col">
+                Sí (directa o a través de un nodo del sistema)
+                <span class="tooltip">**
+                  <span class="tooltip-text">
+                  El envío de la solicitud de auxilio requiere conectividad a Internet hacia el
+                  sistema de monitoreo. Esta conectividad puede estar disponible directamente en
+                  el dispositivo o a través de otro dispositivo cercano del sistema (versión
+                  Basic o Advanced) que disponga de acceso a Internet y funcione como nodo de
+                  enlace para transmitir la alerta.
+
+                  La disponibilidad de la transmisión depende de la conectividad a Internet
+                  existente dentro del entorno de instalación.
+                  </span>
+                </span>
+              </td>
+
             </tr>
           </tbody>
         </table>
@@ -961,7 +1049,7 @@
           <h3>Botón de Auxilio Colaborativo</h3>
           <p class="time">&lt; 10 s</p>
           <p class="description">
-            Activación inmediata con envío automático de micro-ubicación configurada
+            Activación física de un solo toque con envío automático de referencia de ubicación configurada
             <span class="tooltip">
               *
               <span class="tooltip-text">
@@ -977,7 +1065,7 @@
     <figure class="product-image">
       <img src="img/receptor-institucional.png" alt="Sistema institucional de monitoreo">
       <figcaption>
-        Consola institucional de recepción y gestión de solicitudes de auxilio con
+        Centro de Control y Monitoreo (CCM) institucional de recepción y gestión de solicitudes de auxilio con
         micro-ubicación para seguridad privada e industrial. Imagen de referencia conceptual.
       </figcaption>
     </figure>
@@ -986,8 +1074,14 @@
     <section class="section gray">
       <h2>Micro-ubicación configurable</h2>
       <p>
-        Cada dispositivo se configura previamente con su ubicación específica dentro del
-        entorno a proteger:
+        Cada dispositivo se configura previamente con su ubicación específica
+        <span class="tooltip">
+          *
+          <span class="tooltip-text">
+            La precisión de la ubicación depende de la correcta configuración inicial
+            del dispositivo (dirección, coordenadas GPS o punto de instalación).
+          </span>
+        </span> dentro del entorno a proteger:
       </p>
       <ul>
         <li>Área o espacio</li>
@@ -996,8 +1090,8 @@
         <li>Punto crítico definido por la institución</li>
       </ul>
       <p>
-        La precisión no depende de GPS ni de descripciones verbales bajo estrés, permitiendo
-        una respuesta operativa inmediata y dirigida.
+        La referencia de sitio es independiente de señales GPS móviles o descripciones verbales bajo estrés, permitiendo
+        una intervención operativa oportuna y georreferenciada.
       </p>
 
       <p class="sector-cross">
@@ -1024,14 +1118,14 @@
         </a>
 
         <p class="sector-note">
-          Esta misma tecnología se adapta también a entornos
-          <span class="inline-sector-link" data-sector="sector-edu">educativos</span>
-          y a integración con
+          Esta misma infraestructura tecnológica puede implementarse también en
+          entornos
+          <span class="inline-sector-link" data-sector="sector-edu">educativos</span>,
+          <span class="inline-sector-link" data-sector="sector-com">centros comerciales</span>,
+          en integración con
           <span class="inline-sector-link" data-sector="sector-gov">seguridad pública (C4 / C5)</span>
-          y a aplicaciones móviles para 
-          <span class="inline-sector-link" data-sector="sector-movil">
-            vehículos
-          </span>.
+          y en aplicaciones móviles para
+          <span class="inline-sector-link" data-sector="sector-movil">vehículos</span>.
         </p>
       </div>
     </section>
@@ -1059,20 +1153,526 @@
           Ponte en contacto
         </button>
       </div>
+
+      <hr class="note-divider">
+      
+      <div class="tech-note">
+        <strong>Condiciones técnicas del sistema</strong>
+        <p>
+          * La micro-ubicación mostrada en el sistema depende de la correcta
+          configuración inicial del dispositivo, incluyendo la dirección,
+          coordenadas GPS o punto de instalación definidos durante el proceso
+          de configuración. Una configuración incorrecta puede afectar la
+          precisión de la ubicación mostrada en el sistema de monitoreo.
+        </p>
+
+        <p>
+          ** La transmisión de la solicitud de auxilio requiere conectividad a Internet. 
+          La conexión puede establecerse mediante una red Wi-Fi con acceso a Internet 
+          o a través de un dispositivo cercano del sistema (versión Basic o Advanced) 
+          que disponga de dicha conectividad y funcione como nodo de enlace.
+
+          La disponibilidad de la transmisión depende de la conectividad a Internet 
+          existente en el lugar de instalación.
+        </p>
+      </div>
     </section>
   </div> <!-- cierre de sector-ind -->
+
+  <div id="sector-com" class="sector-content">
+
+    <!-- INTRODUCCIÓN -->
+    <section class="section">
+      <h2>Centros Comerciales</h2>
+
+      <p>
+        <strong>Sistema físico de auxilio con referencia de ubicación técnica por punto de venta o área común para
+        centros comerciales con seguridad privada.</strong>
+      </p>
+
+      <p>
+        Infraestructura tecnológica diseñada para permitir que locatarios,
+        personal y visitantes puedan solicitar ayuda con una pulsación única dentro
+        del centro comercial, enviando un evento de alerta con ubicación
+        configurada
+        <span class="tooltip">
+          *
+          <span class="tooltip-text">
+            La precisión de la ubicación depende de la correcta configuración inicial
+            del dispositivo (número de local, pasillo, zona o coordenadas del punto
+            de instalación).
+          </span>
+        </span>
+        hacia el Centro de Control y Monitoreo (
+        <span class="inline-sector-link product-ref" data-sector="producto-control-general">CCM</span> ) del centro comercial.
+      </p>
+
+    </section>
+
+
+    <!-- PROBLEMA -->
+    <section class="section">
+
+      <h2>El problema operativo en centros comerciales</h2>
+
+      <p>
+        En muchos centros comerciales, los locatarios y visitantes enfrentan barreras críticas 
+        para solicitar asistencia de forma ágil dentro de las instalaciones. 
+        Ante un incidente, el personal suele quedar incomunicado, perdiendo tiempo vital 
+        al tener que abandonar su posición para buscar a un elemento de seguridad o 
+        dirigirse físicamente hacia una caseta de vigilancia.
+      </p>
+
+      <p>
+        Este proceso puede ser complicado o imposible durante situaciones como
+        asaltos, intentos de robo o confrontaciones con clientes agresivos,
+        especialmente cuando el personal se encuentra dentro de un local cerrado.
+      </p>
+
+      <ul>
+
+        <li>
+          Locatarios que no pueden abandonar su local durante un evento de riesgo
+        </li>
+
+        <li>
+          Usuarios que enfrentan incidentes en pasillos, sanitarios o áreas poco
+          vigiladas
+        </li>
+
+        <li>
+          Zonas extensas donde la seguridad no puede estar presente de forma
+          permanente
+        </li>
+
+        <li>
+          Dificultad para describir la ubicación exacta del evento bajo estrés
+        </li>
+
+      </ul>
+
+    </section>
+
+
+    <!-- RIESGO EN COMERCIOS DE ALTO VALOR -->
+    <section class="section">
+
+      <h2>Unidades de negocio con perfiles de alto riesgo a incidentes</h2>
+
+      <p>
+        Algunos establecimientos dentro de los centros comerciales concentran
+        productos o servicios de alto valor económico, lo que incrementa el
+        riesgo operativo frente a robos o intentos de asalto.
+      </p>
+
+      <ul>
+
+        <li>Bancos y sucursales financieras</li>
+
+        <li>Casas de cambio</li>
+
+        <li>Joyerías</li>
+
+        <li>Tiendas de telefonía móvil de alta gama</li>
+
+        <li>Comercios de electrónica o artículos de alto valor</li>
+
+        <li>
+          Restaurantes de alta gama donde los clientes pueden portar relojes,
+          joyería u otros artículos de valor que pueden atraer incidentes
+          oportunistas
+        </li>
+
+        <li>Tiendas de lujo o boutiques de marcas premium</li>
+      </ul>
+
+      <p>
+        En estos casos, disponer de un alertamiento silencioso y de activación táctil
+        permite solicitar apoyo sin abandonar el punto de operación ni generar
+        situaciones de mayor riesgo.
+      </p>
+
+    </section>
+
+    <!-- POR QUÉ UN SOLO BOTÓN -->
+    <section class="section">
+
+      <h2>Por qué un solo botón es crítico en una emergencia</h2>
+
+      <p>
+        Durante situaciones de estrés o pánico, la capacidad de evaluar múltiples
+        opciones disminuye considerablemente. Tener que abrir una aplicación,
+        marcar un número telefónico o explicar una situación puede generar
+        retrasos críticos.
+      </p>
+
+      <p>
+        El Botón de Auxilio Colaborativo se basa en el principio de
+        <strong>acción única</strong>: una sola interacción física para activar
+        la solicitud de ayuda.
+      </p>
+
+      <p>
+        El usuario únicamente solicita auxilio. La evaluación del tipo de evento
+        corresponde al personal de seguridad del centro comercial una vez que
+        llega al punto exacto del incidente.
+      </p>
+
+    </section>
+
+
+    <!-- SOLUCIÓN -->
+    <section class="section gray">
+
+      <h2>La solución</h2>
+
+      <p>
+        El Botón de Auxilio Colaborativo es un dispositivo físico dedicado que
+        permite a locatarios y visitantes solicitar ayuda de forma inmediata
+        dentro del centro comercial.
+      </p>
+
+      <ul>
+
+        <li>
+          Activación física por pulsación sin necesidad de teléfonos móviles
+        </li>
+
+        <li>
+          Envío automático de la solicitud de auxilio al Centro de Control y Monitoreo (
+          <span class="inline-sector-link product-ref" data-sector="producto-control-general">CCM</span> )
+        </li>
+
+        <li>
+          Identificación del origen de la alerta mediante ubicación configurada
+          <span class="tooltip">
+            *
+            <span class="tooltip-text">
+              La precisión de la ubicación depende de la correcta configuración inicial
+              del dispositivo (número de local, pasillo, zona o coordenadas del punto
+              de instalación).
+            </span>
+          </span>
+        </li>
+
+        <li>
+          Visualización de la alerta en el Centro de Control y Monitoreo (
+          <span class="inline-sector-link product-ref" data-sector="producto-control-general">CCM</span> ) del centro comercial
+        </li>
+
+      </ul>
+    </section>
+
+    <figure class="product-image">
+      <img src="img/boton-auxilio.png"
+          alt="Botón de Auxilio para centros comerciales">
+
+      <figcaption>
+        Dispositivo de activación de un solo pulso instalado en mostradores,
+        columnas de pasillos o puntos estratégicos dentro del centro comercial.
+        Imagen de referencia conceptual.
+      </figcaption>
+    </figure>
+
+    <!-- COMPARATIVA -->
+    <section class="section gray">
+
+      <h2>Comparativa operativa en centros comerciales</h2>
+
+      <div class="table-container">
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Característica</th>
+
+              <th>Reporte telefónico</th>
+
+              <th>Guardias de pasillo</th>
+
+              <th class="highlight-col">Botón Colaborativo</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td>Activación por pulsación</td>
+
+              <td>No</td>
+
+              <td>Limitada</td>
+
+              <td class="highlight-col">Sí</td>
+            </tr>
+
+            <tr>
+              <td>Ubicación del evento</td>
+
+              <td>General / ambigua</td>
+
+              <td>Visual</td>
+
+              <td class="highlight-col">
+                Referencia de ubicación configurada
+                <span class="tooltip">
+                  *
+                  <span class="tooltip-text">
+                    La precisión de la ubicación depende de la correcta configuración inicial
+                    del dispositivo (número de local, pasillo, zona o coordenadas del punto
+                    de instalación).
+                  </span>
+                </span>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Identificación del origen</td>
+
+              <td>Dependiente del usuario</td>
+
+              <td>Visual aproximada</td>
+
+              <td class="highlight-col">
+                Sí (según configuración del dispositivo)
+                <span class="tooltip">
+                  *
+                  <span class="tooltip-text">
+                    La precisión de la ubicación depende de la correcta configuración inicial
+                    del dispositivo (número de local, pasillo, zona o coordenadas del punto
+                    de instalación).
+                  </span>
+                </span>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Dependencia del usuario</td>
+
+              <td>Alta</td>
+
+              <td>Media</td>
+
+              <td class="highlight-col">Mínima</td>
+            </tr>
+
+            <tr>
+              <td>Notificación al centro de monitoreo</td>
+
+              <td>No siempre</td>
+
+              <td>No</td>
+
+              <td class="highlight-col">
+                Sí
+                <span class="tooltip">**
+                  <span class="tooltip-text">
+                    La transmisión de la solicitud de auxilio requiere conectividad
+                    a Internet hacia el sistema de monitoreo. Esta conexión puede
+                    establecerse directamente desde el dispositivo o a través de
+                    otro dispositivo cercano del sistema que disponga de acceso
+                    a Internet y funcione como nodo de enlace.
+                  </span>
+                </span>
+              </td>
+            </tr>
+
+          </tbody>
+
+        </table>
+      </div>
+    </section>
+
+    <!-- TIEMPOS -->
+    <section class="section gray">
+      <h2>El tiempo como factor crítico</h2>
+
+      <div class="timer-grid">
+
+        <div class="timer-card">
+          <h3>Apps móviles</h3>
+
+          <p class="time">60–120 s</p>
+
+          <p class="description">
+            Requiere desbloquear el teléfono, abrir la aplicación y
+            enviar la información manualmente.
+          </p>
+        </div>
+
+        <div class="timer-card">
+          <h3>Vigilancia física reactiva</h3>
+
+          <p class="time">3–10 min</p>
+
+          <p class="description">
+            El personal de seguridad debe localizar visualmente el
+            origen del incidente dentro de pasillos o estacionamientos.
+          </p>
+        </div>
+
+        <div class="timer-card highlight">
+          <h3>Botón de Auxilio Colaborativo</h3>
+
+          <p class="time">&lt; 10 s</p>
+
+          <p class="description">
+            Activación física de un solo toque con envío automático de referencia de ubicación configurada
+            <span class="tooltip">
+              *
+              <span class="tooltip-text">
+                La precisión de la ubicación depende de la correcta configuración inicial
+                del dispositivo (número de local, pasillo, zona o coordenadas del punto
+                de instalación).
+              </span>
+            </span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <figure class="product-image">
+      <img src="img/receptor-institucional.png"
+          alt="Centro de Control y Monitoreo del centro comercial">
+      <figcaption>
+        Interfaz de recepción de eventos en el Centro de Control y Monitoreo (
+        <span class="inline-sector-link product-ref" data-sector="producto-control-general">CCM</span> ) del
+        centro comercial mostrando el punto de activación de la alerta.
+        Imagen de referencia conceptual.
+      </figcaption>
+    </figure>
+
+    <!-- MICRO UBICACIÓN -->
+    <section class="section gray">
+      <h2>Micro-ubicación configurable</h2>
+
+      <p>
+        Cada dispositivo puede configurarse previamente con la
+        ubicación específica
+        <span class="tooltip">
+          *
+          <span class="tooltip-text">
+            La precisión de la ubicación depende de la correcta configuración inicial
+            del dispositivo (número de local, pasillo, zona o coordenadas del punto
+            de instalación).
+          </span>
+        </span>
+        dentro del centro comercial.
+      </p>
+
+      <ul>
+        <li>Número de local</li>
+        <li>Pasillo o sección</li>
+        <li>Nivel o piso</li>
+        <li>Zona (food court, sanitarios, acceso, etc.)</li>
+        <li>Área de estacionamiento</li>
+      </ul>
+
+      <p>
+        Optimiza el despliegue de brigadas de reacción hacia el punto 
+        exacto del incidente sin depender de
+        descripciones verbales del usuario.
+      </p>
+
+    </section>
+
+
+    <!-- DESCARGA -->
+    <section class="section gray">
+      <h2>Información técnica</h2>
+
+      <p class="sector-cross">
+        En centros comerciales con alta afluencia de visitantes,
+        la infraestructura puede ampliarse con
+        <a href="sismico.html?from=sector-com" class="sismico-link" target="_self">
+          Alertamiento Sísmico
+        </a>
+        como apoyo a protocolos de evacuación, continuidad operativa
+        y protección de locatarios, personal y visitantes,
+        disponible en las ediciones
+        <span class="inline-sector-link product-ref" data-sector="producto-basic">
+          Basic
+        </span>
+        y
+        <span class="inline-sector-link product-ref" data-sector="producto-advanced">
+          Advanced
+        </span>.
+      </p>
+
+      <div class="download-box">
+        <a href="pdf/One-Pager_BotonAuxilio_Comercial_v1.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="download-btn">
+
+          Descargar One-Pager (Centros Comerciales)
+        </a>
+      </div>
+
+      <p class="sector-note">
+        Esta misma infraestructura tecnológica puede implementarse también en entornos
+        <span class="inline-sector-link" data-sector="sector-edu">educativos</span>,
+        <span class="inline-sector-link" data-sector="sector-ind">industriales / residenciales</span>,
+        <span class="inline-sector-link" data-sector="sector-gov">gobierno / C4-C5</span>
+        y en aplicaciones móviles para
+        <span class="inline-sector-link" data-sector="sector-movil">vehículos</span>.
+      </p>
+
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section gray">
+
+      <h2>Contacto institucional</h2>
+      <p>
+        Solicita información técnica, demostraciones o
+        evaluaciones piloto para centros comerciales.
+      </p>
+
+      <p>
+        <strong>Correo institucional:</strong><br>
+        contacto@botonauxilio.com<br>
+        <span style="font-size:0.9rem; color:#555;">
+          (Disponible próximamente)
+        </span>
+      </p>
+
+      <div class="download-box">
+        <button class="contact-open-btn">
+          Ponte en contacto
+        </button>
+      </div>
+
+      <hr class="note-divider">
+
+      <div class="tech-note">
+        <strong>Condiciones técnicas del sistema</strong>
+        <p>
+          * La micro-ubicación mostrada en el sistema depende de la
+          configuración inicial del dispositivo durante su instalación.
+        </p>
+
+        <p>
+          ** La transmisión de la solicitud de auxilio requiere
+          conectividad a Internet directa o a través de un dispositivo
+          del sistema que funcione como nodo de enlace.
+        </p>
+
+      </div>
+    </section>
+  </div> <!-- cierre de sector-com -->
 
   <div id="sector-movil" class="sector-content">
     <div class="section gray">
 
       <h2>Botón de Auxilio Colaborativo Móvil</h2>
-      <p class="subtitle">Tu seguridad en carretera, a un solo toque.</p>
+      <p class="subtitle">Protección en movimiento y rastreo dinámico en tiempo real.</p>
 
       <div class="sector-note">
-        ⚠️ Disponible para instituciones que cuenten con infraestructura
+        ⚠️ Requiere infraestructura de nodos 
         <span class="inline-sector-link product-ref"
           data-sector="producto-advanced">Botón de Auxilio Colaborativo Advanced</span>.
-        El despliegue a nivel gubernamental se encuentra en fase de coordinación.
+        para triangulación y reporte. El despliegue a nivel gubernamental se encuentra en fase de coordinación.
       </div>
 
       <p class="sector-cross">
@@ -1094,7 +1694,7 @@
 
       <h3>El problema operativo en rutas y vialidades</h3>
       <ul>
-        <li>Ubicación imprecisa en movimiento</li>
+        <li>Falta de referencias y jurisdicción incierta en trayectos desconocidos</li>
         <li>Entrevistas telefónicas bajo estrés</li>
         <li>Pérdida de rastro en trayectos dinámicos</li>
         <li>Despacho tardío e impreciso</li>
@@ -1102,10 +1702,12 @@
 
       <h3>La solución</h3>
       <ul>
-        <li>Activación física inmediata</li>
-        <li>GPS dinámico con actualizaciones cada 30 segundos</li>
-        <li>Identidad completa del vehículo</li>
-        <li>Recepción centralizada en C4/C5</li>
+        <li>Activación física de un solo toque</li>
+        <li>Arquitectura de enlace dinámico con rastreo cada 30 segundos</li>
+        <li>Ficha Operativa de Emergencia (Placas, Modelo, Color)</li>
+        <li>Recepción centralizada en el Centro de Control y Monitoreo (
+          <span class="inline-sector-link product-ref" data-sector="producto-control-general">CCM</span> )
+        </li>
       </ul>
 
       <!-- BLOQUE DE IMÁGENES -->
@@ -1120,7 +1722,8 @@
         <figure class="product-image">
           <img src="img/receptor-institucional.png" alt="Visualización de alertas móviles en C4 C5">
           <figcaption>
-            Visualización centralizada de ubicación y datos del vehículo en C4/C5.
+            Visualización centralizada de ubicación y datos del vehículo en el Centro de Control y Monitoreo (
+              <span class="inline-sector-link product-ref" data-sector="producto-control-general">CCM</span> ).
           </figcaption>
         </figure>
       </div>
@@ -1130,7 +1733,7 @@
       <ul>
         <li>Universidades y campus extensos</li>
         <li>Transporte interno institucional</li>
-        <li>Logística privada y flotas cerradas</li>
+        <li>Transporte de carga, logística y última milla</li>
         <li>Plataformas de transporte (previa autorización)</li>
         <li>Gobierno (fase de adopción progresiva)</li>
       </ul>
@@ -1142,11 +1745,6 @@
           rel="noopener">
           Descargar One Pager – Botón de Auxilio Móvil
         </a>
-
-        <p class="sector-note">
-          Documento técnico–institucional para evaluación, presentación interna
-          o análisis de piloto.
-        </p>
       </div>
 
       <section class="contact-institutional">
@@ -1197,7 +1795,7 @@
       </section>
 
     </div>
-  </div> <!-- cierre de movil -->
+  </div> <!-- cierre de sector-movil -->
 
   <!-- PRODUCTOS -->
   <div id="producto-basic" class="sector-content">
@@ -1206,7 +1804,7 @@
 
       <h2>Botón de Auxilio Colaborativo – Versión BASIC</h2>
       <p class="subtitle">
-        Activación física inmediata con arquitectura Dual-Link Wi-Fi y red colaborativa.
+        Dispositivo de alertamiento con redundancia colaborativa Dual-Link Wi-Fi y red colaborativa.
       </p>
 
       <!-- IMAGEN PRODUCTO -->
@@ -1224,23 +1822,33 @@
       <section class="product-block">
         <h3>El Problema Operativo: El Factor Tiempo</h3>
         <ul>
-          <li>Llamadas 911 con entrevista bajo estrés.</li>
-          <li>Aplicaciones móviles con múltiples pasos.</li>
-          <li>Errores en dirección y referencias.</li>
-          <li>Retrasos críticos en despacho.</li>
+          <li>Dependencia de canales de voz y descripción manual de ubicación bajo estrés</li>
+          <li>Aplicaciones móviles con múltiples pasos</li>
+          <li>Errores en dirección y referencias</li>
+          <li>Retrasos críticos en despacho</li>
         </ul>
       </section>
 
       <!-- SOLUCIÓN -->
       <section class="product-block">
-        <h3>La Solución: Acción Única con Datos Precisos</h3>
+        <h3>La Solución: Acción Única con Datos Precisos
+          <span class="tooltip">
+            *
+              <span class="tooltip-text">
+                La precisión de la ubicación depende de la correcta configuración inicial
+                del dispositivo (dirección, coordenadas GPS o punto de instalación).
+              </span>
+            </span>
+        </h3>
         <ul>
-          <li>Botón físico dedicado.</li>
-          <li>Envío automático de ficha técnica pre-configurada.</li>
-          <li>Integración con 
-            <span class="inline-sector-link" data-sector="sector-gov">seguridad pública (C4 / C5)</span>
-             o privada.</li>
-          <li>Transmisión en cuestión de segundos.</li>
+          <li>Hardware de Acción Única con Ficha Operativa</li>
+          <li>Envío automático de ficha técnica pre-configurada</li>
+          <li>
+            Visualización y gestión de eventos a través del Centro de Control y Monitoreo (
+              <span class="inline-sector-link product-ref" data-sector="producto-control-general">CCM</span> ),
+            mediante plataforma web propia en tiempo real, sin dependencia de sistemas externos
+          </li>
+          <li>Transmisión en cuestión de segundos</li>
         </ul>
       </section>
 
@@ -1252,8 +1860,8 @@
           <div class="dual-card">
             <h4>1. Enlace Directo</h4>
             <p>
-              Conexión al internet local (SSID + Password) para envío
-              inmediato a la autoridad configurada.
+              Gateway Primario: Transmisión directa vía infraestructura local (Wi-Fi) para envío
+              a la autoridad configurada.
             </p>
           </div>
 
@@ -1271,9 +1879,9 @@
 
         <!-- DIAGRAMA RED COLABORATIVA -->
         <figure class="product-figure diagram-figure">
-          <img src="img/receptor-institucional.png"
+          <img src="img/Imagen2Basic.png"
               alt="Diagrama de red colaborativa donde un dispositivo con internet sirve de puente a otro sin internet"
-              class="product-image-diagram">
+              class="zoom-diagram">
 
           <figcaption>
             Ilustración 2 - Diagrama de Red Colaborativa: Dispositivo A (con internet) sirviendo de puente al Dispositivo B (sin internet).
@@ -1315,12 +1923,12 @@
 
       <!-- ALERTAMIENTO SÍSMICO -->
       <section class="product-block">
-        <h3>Preparado para Alertamiento Sísmico (Opcional)</h3>
+        <h3>Preparado como Módulo de Recepción Sísmica Georreferenciada (Opcional)</h3>
 
         <ul>
-          <li>Capacidad de interpretar flujos de datos de proveedores autorizados.</li>
-          <li>Activación sonora basada en geolocalización.</li>
-          <li>Difusión colaborativa hacia nodos sin internet.</li>
+          <li>Capacidad de interpretar flujos de datos de proveedores autorizados</li>
+          <li>Activación sonora basada en geolocalización</li>
+          <li>Difusión colaborativa hacia nodos sin internet</li>
         </ul>
 
         <div class="legal-note">
@@ -1330,21 +1938,38 @@
         </div>
       </section>
 
+      <p class="sector-cross">
+        En distintos entornos operativos, la infraestructura puede ampliarse con
+        <a href="sismico.html?from=producto-basic" class="sismico-link" target="_self">
+          Alertamiento Sísmico
+        </a>
+        como apoyo a protocolos de evacuación, continuidad operativa y protección de personas, aplicable en
+        <span class="inline-sector-link" data-sector="sector-edu">entornos educativos</span>,
+        <span class="inline-sector-link" data-sector="sector-ind">industriales / residenciales</span>,
+        <span class="inline-sector-link" data-sector="sector-com">centros comerciales</span>
+        y
+        <span class="inline-sector-link" data-sector="sector-gov">espacios públicos</span>,
+        disponible también en la versión
+        <span class="inline-sector-link product-ref" data-sector="producto-advanced">
+          Advanced
+        </span>.
+      </p>
+
       <!-- VENTAJAS -->
       <section class="product-block">
         <h3>Ventajas Competitivas</h3>
         <ul>
-          <li>Cero fricción operativa.</li>
-          <li>Micro-ubicación configurada
+          <li>Cero fricción operativa</li>
+          <li>Referencia de ubicación configurada
             <span class="tooltip">
             *
               <span class="tooltip-text">
                 La precisión de la ubicación depende de la correcta configuración inicial
                 del dispositivo (dirección, coordenadas GPS o punto de instalación).
               </span>
-            </span> pre-cargada.</li>
-          <li>Arquitectura colaborativa redundante.</li>
-          <li>Arranque automático al encender.</li>
+            </span> pre-cargada</li>
+          <li>Arquitectura colaborativa redundante</li>
+          <li>Operatividad 'Plug & Protect' con auto-diagnóstico de red</li>
         </ul>
       </section>
 
@@ -1357,6 +1982,36 @@
           Descargar One-Pager – Versión BASIC
         </a>
       </div>
+
+      <!-- CONTACTO -->
+      <section class="section contact-section">
+
+        <h2>Contacto institucional</h2>
+
+        <p>
+          Solicita información técnica, una demostración funcional o un piloto controlado
+          del sistema en tu entorno operativo.
+        </p>
+
+        <p>
+          El producto BASIC puede evaluarse mediante pruebas controladas para validar
+          su funcionamiento, cobertura y tiempos de respuesta en condiciones reales.
+        </p>
+
+        <p>
+          <strong>Correo institucional:</strong><br>
+          contacto@botonauxilio.com<br>
+          <span class="coming-soon">(Disponible próximamente)</span>
+        </p>
+
+        <!-- BOTÓN DE CONTACTO -->
+        <div class="download-box">
+          <button class="contact-open-btn">
+            Solicitar información
+          </button>
+        </div>
+
+      </section>
 
     </div>
 
@@ -1381,16 +2036,16 @@
       </figure>
 
       <div class="highlight-box">
-        Dispositivo de alta disponibilidad con arquitectura de Triple Vía:
-        Internet Directo · Puente Wi-Fi · Puente LoRa de Largo Alcance.
+        Dispositivo de comunicación redundante con arquitectura de Triple Vía:
+        Internet Directo · Puente Wi-Fi · Puente LoRa de Largo Alcance
       </div>
 
       <!-- PROBLEMA -->
       <h3>Puntos Ciegos de Conectividad</h3>
       <ul>
-        <li>Zonas sin infraestructura Wi-Fi (parques, paraderos, estacionamientos).</li>
-        <li>Saturación o caída de red en emergencias masivas.</li>
-        <li>Instalaciones extensas donde el Wi-Fi no cubre perímetros completos.</li>
+        <li>Zonas sin infraestructura Wi-Fi (parques, paraderos, estacionamientos)</li>
+        <li>Saturación o caída de red en emergencias masivas</li>
+        <li>Instalaciones extensas donde el Wi-Fi no cubre perímetros completos</li>
       </ul>
 
       <!-- ARQUITECTURA -->
@@ -1402,16 +2057,17 @@
           <h4>1. Conexión Directa</h4>
           <p>
             Si existe conexión a internet local, el dispositivo transmite
-            directamente al centro de monitoreo configurado (C4/C5 o privado).
+            directamente al Centro de Control y Monitoreo (
+            <span class="inline-sector-link product-ref" data-sector="producto-control-general">CCM</span> ) configurado (C4/C5 o privado).
           </p>
         </div>
 
         <div class="triple-card">
           <h4>2. Puente Wi-Fi Colaborativo</h4>
           <p>
-            Si pierde internet, busca nodos 
+            Si pierde internet, busca automáticamente nodos 
             <span class="inline-sector-link product-ref" data-sector="producto-basic">Basic</span>
-             o Advanced cercanos para retransmitir la alerta vía Wi-Fi.
+             o Advanced cercanos con enlace activo para retransmitir la alerta vía Wi-Fi.
           </p>
         </div>
 
@@ -1427,39 +2083,22 @@
 
       <!-- IMAGEN 2 -->
       <figure class="product-figure diagram-figure">
-        <img src="img/receptor-institucional.png"
-            alt="Diagrama efecto domino LoRa en red colaborativa"
-            class="product-image-diagram">
+        <img src="img/Imagen2Advanced.png"
+            alt="Diagrama LoRa en red colaborativa"
+            class="zoom-diagram">
         <figcaption>
-          Ilustración 2 - Diagrama de "Efecto Dominó": Transmisión de alerta desde zona sin cobertura hacia centro de control mediante salto LoRa.
+          Ilustración 2 - Diagrama de transmisión de alerta desde zona sin cobertura hacia centro de control mediante salto LoRa.
         </figcaption>
       </figure>
 
       <!-- VENTAJAS LORA -->
       <h3>Ventajas Técnicas de la Comunicación LoRa</h3>
       <ul>
-        <li>Alcance significativamente superior al Wi-Fi convencional.</li>
-        <li>Bajo consumo energético para operación continua.</li>
-        <li>Mayor penetración en espacios abiertos o semiurbanos.</li>
-        <li>Alta resiliencia ante saturación de redes comerciales.</li>
-        <li>Arquitectura escalable tipo malla colaborativa.</li>
-      </ul>
-
-      <!-- EFECTO DOMINO -->
-      <h3>Red Colaborativa de Largo Alcance</h3>
-      <p>
-        Cuando un nodo Advanced recibe una alerta o evento sísmico desde un proveedor autorizado,
-        puede retransmitir la señal vía Wi-Fi a dispositivos cercanos y simultáneamente vía LoRa
-        a otros nodos Advanced dentro de su cobertura extendida, generando un efecto dominó de alerta.
-      </p>
-
-      <!-- ALERTAMIENTO SISMICO -->
-      <h3>Capacidad de Integración para Alertamiento Sísmico</h3>
-      <ul>
-        <li>Interpretación técnica de flujos de datos provenientes de proveedores autorizados.</li>
-        <li>Activación del aviso sonoro oficial conforme a lineamientos regulatorios.</li>
-        <li>Difusión colaborativa vía Wi-Fi y LoRa hacia zonas sin conectividad.</li>
-        <li>Requiere convenio con proveedores facultados (ej. SkyAlert).</li>
+        <li>Alcance significativamente superior al Wi-Fi convencional</li>
+        <li>Bajo consumo energético para operación continua</li>
+        <li>Mayor penetración en espacios abiertos o semiurbanos</li>
+        <li>Alta resiliencia ante saturación de redes comerciales</li>
+        <li>Arquitectura escalable tipo malla colaborativa</li>
       </ul>
 
       <div class="disclaimer-box">
@@ -1467,13 +2106,46 @@
         La atención y tiempos de respuesta operativa dependen exclusivamente de la institución correspondiente.
       </div>
 
+      <!-- ALERTAMIENTO SISMICO -->
+      <h3>Capacidad de Integración para Alertamiento Sísmico</h3>
+
+      <p>
+        Cuando un nodo Advanced recibe una alerta o evento sísmico desde un proveedor autorizado,
+        puede retransmitir la señal vía Wi-Fi a dispositivos cercanos y simultáneamente vía LoRa
+        a otros nodos Advanced dentro de su cobertura extendida, generando un efecto dominó de alerta.
+      </p>
+
+      <ul>
+        <li>Interpretación técnica de flujos de datos provenientes de proveedores autorizados</li>
+        <li>Activación del aviso sonoro conforme a lineamientos regulatorios</li>
+        <li>Difusión colaborativa vía Wi-Fi y LoRa hacia zonas sin conectividad</li>
+        <li>Requiere convenio con proveedores facultados</li>
+      </ul>
+
+      <p class="sector-cross">
+        En distintos entornos operativos, la infraestructura Advanced puede ampliarse con
+        <a href="sismico.html?from=producto-advanced" class="sismico-link" target="_self">
+          Alertamiento Sísmico
+        </a>
+        como apoyo a protocolos de evacuación, continuidad operativa y protección de personas, aplicable en
+        <span class="inline-sector-link" data-sector="sector-edu">entornos educativos</span>,
+        <span class="inline-sector-link" data-sector="sector-ind">industriales / residenciales</span>,
+        <span class="inline-sector-link" data-sector="sector-com">centros comerciales</span>
+        y
+        <span class="inline-sector-link" data-sector="sector-gov">espacios públicos</span>,
+        disponible también en la versión
+        <span class="inline-sector-link product-ref" data-sector="producto-basic">
+          Basic
+        </span>.
+      </p>
+
       <!-- APLICACIONES -->
       <h3>Sectores de Aplicación Extendida</h3>
       <ul>
-        <li>Paraderos y espacios públicos sin infraestructura de red.</li>
-        <li>Perímetros industriales y campus extensos.</li>
-        <li>Estacionamientos y zonas comunes residenciales.</li>
-        <li>Redes urbanas de última milla para gobiernos municipales.</li>
+        <li>Paraderos y espacios públicos sin infraestructura de red</li>
+        <li>Perímetros industriales y campus extensos</li>
+        <li>Estacionamientos y zonas comunes residenciales</li>
+        <li>Redes urbanas de última milla para gobiernos municipales</li>
       </ul>
 
       <div class="download-box">
@@ -1493,15 +2165,29 @@
       </div>
 
       <!-- CONTACTO -->
-      <section class="contact-institutional">
+      <section class="section contact-section">
 
-        <h2>Contacto Institucional</h2>
+        <h2>Contacto institucional</h2>
 
         <p>
-          Solicita un análisis de cobertura LoRa y diseño de red colaborativa para tu zona.
+          Solicita información técnica, una demostración funcional o un piloto controlado
+          del sistema en tu entorno operativo.
         </p>
 
-        <div class="center-button">
+        <p>
+          La versión ADVANCED permite realizar análisis de cobertura LoRa,
+          diseño de red colaborativa y validación de alcance en campo
+          para implementaciones de mediana y gran escala.
+        </p>
+
+        <p>
+          <strong>Correo institucional:</strong><br>
+          contacto@botonauxilio.com<br>
+          <span class="coming-soon">(Disponible próximamente)</span>
+        </p>
+
+        <!-- BOTÓN DE CONTACTO -->
+        <div class="download-box">
           <button class="contact-open-btn">
             Solicitar análisis técnico
           </button>
@@ -1512,146 +2198,164 @@
     </div>
   </div> <!-- cierre de producto-advanced -->
 
+  <!-- VERSIÓN MÓVIL -->
   <div id="producto-movil" class="sector-content">
     <div class="section gray">
 
-    <h2>Botón de Auxilio – Versión MÓVIL</h2>
-    <p class="subtitle">
-      Protección en movimiento y transmisión dinámica de ubicación.
-    </p>
-
-    <div class="sector-note">
-      ⚠️ Requiere infraestructura previa con nodos
-      <span class="inline-sector-link product-ref"
-          data-sector="producto-advanced">Botón de Auxilio Colaborativo Advanced</span>
-       para operación dentro del ecosistema.
-    </div>
-
-    <!-- PROBLEMA -->
-    <h3>El reto operativo en movilidad</h3>
-    <ul>
-      <li>Ubicación imprecisa en carreteras o zonas desconocidas</li>
-      <li>Cambio constante de jurisdicción municipal</li>
-      <li>Pérdida de rastro cuando el vehículo continúa en movimiento</li>
-      <li>Dificultad para describir ubicación bajo estrés</li>
-    </ul>
-
-    <!-- SOLUCIÓN -->
-    <h3>Arquitectura de Transmisión Dinámica (LoRa + GPS)</h3>
-
-    <ul>
-      <li>Activación física de acción única</li>
-      <li>Transmisión vía LoRa hacia nodo 
-        <span class="inline-sector-link product-ref"
-          data-sector="producto-advanced">Advanced</span>
-
-         más estable
-      </li>
-      <li>Envío de ubicación inicial + datos del vehículo</li>
-      <li>Actualización automática de posición cada 30 segundos</li>
-      <li>Selección automática de nuevo nodo si cambia el entorno</li>
-    </ul>
-
-    <p>
-      El dispositivo versión Móvil funciona como emisor dedicado.
-      No actúa como puente para otros dispositivos, sino que utiliza
-      la red de nodos Advanced para procurar el envío de la información
-      hacia el centro de monitoreo configurado.
-    </p>
-
-    <!-- IMÁGENES -->
-    <div class="product-images">
-
-      <figure class="product-image">
-        <img src="img/boton-auxilio.png"
-            alt="Botón de Auxilio Móvil instalado en cabina de vehículo">
-        <figcaption>
-          Ilustración 1 - Botón de Auxilio Móvil: Diseño ergonómico para instalación en cabina o tablero.
-        </figcaption>
-      </figure>
-
-      <figure class="product-image">
-        <img src="img/receptor-institucional.png"
-            alt="Diagrama transmisión dinámica entre vehículo y nodos Advanced">
-        <figcaption>
-          Ilustración 2 - Diagrama de Transmisión Dinámica: Vehículo en movimiento saltando entre nodos Advanced conforme cambia su ubicación.
-        </figcaption>
-      </figure>
-
-    </div>
-
-    <!-- FUNCIONAMIENTO -->
-    <h3>Funcionamiento en movimiento</h3>
-
-    <ul>
-      <li>Al activarse, envía ubicación inicial y ficha del vehículo</li>
-      <li>Actualiza coordenadas GPS cada 30 segundos</li>
-      <li>Si el nodo 
-        <span class="inline-sector-link product-ref"
-          data-sector="producto-advanced">Advanced</span>
-         inicial queda fuera de alcance, busca uno nuevo
-      </li>
-      <li>Reintenta transmisión ante interferencias geográficas o ambientales</li>
-    </ul>
-
-    <p>
-      En caso de cambio de jurisdicción municipal, el sistema permite
-      redirigir la información hacia la autoridad correspondiente,
-      conforme a la configuración institucional previamente establecida.
-    </p>
-
-    <!-- FICHA VEHÍCULO -->
-    <h3>Ficha Operativa de Emergencia</h3>
-
-    <ul>
-      <li>Placas registradas</li>
-      <li>Marca, Submarca y Color</li>
-      <li>Punto inicial de activación</li>
-      <li>Trayectoria actualizada durante el evento</li>
-    </ul>
-
-    <!-- DISCLAIMER LEGAL SUAVE -->
-    <div class="legal-note">
-      El dispositivo transmite información en segundos hacia la infraestructura configurada.
-      La atención, despacho y tiempos de respuesta dependen exclusivamente
-      de las autoridades o proveedores de seguridad correspondientes.
-    </div>
-
-    <!-- ONE PAGER -->
-    <div class="download-box">
-
-      <a href="pdf/One-Pager_BotonAuxilioMovil.pdf"
-        class="download-btn"
-        target="_blank"
-        rel="noopener">
-        Descargar One-Pager – Botón de Auxilio Móvil
-      </a>
-
-      <p class="sector-note">
-        Documento técnico para integración de flotas institucionales.
+      <h2>Botón de Auxilio – Versión MÓVIL</h2>
+      <p class="subtitle">
+        Seguridad a bordo con tecnología de Enlace Dinámico y Rastreo Recurrente.
       </p>
 
-    </div>
-
-    <!-- CONTACTO -->
-    <section class="contact-institutional">
-
-      <h2>Contacto Institucional</h2>
-
-      <p>
-        Solicita información técnica para integrar tu flota
-        a la red de auxilio colaborativa.
-      </p>
-
-      <div class="center-button">
-        <button class="contact-open-btn">
-          Solicitar información técnica
-        </button>
+      <div class="sector-note">
+        ⚠️ Requiere infraestructura previa con nodos
+        <span class="inline-sector-link product-ref"
+            data-sector="producto-advanced">Botón de Auxilio Colaborativo Advanced</span>
+        para operación dentro del ecosistema.
       </div>
 
-    </section>
+      <!-- PROBLEMA -->
+      <h3>El reto operativo en movilidad</h3>
+      <ul>
+        <li>Dificultad para referenciar incidentes en trayectos desconocidos</li>
+        <li>Conflictos de competencia entre autoridades durante el tránsito</li>
+        <li>Pérdida de rastro cuando el vehículo continúa en movimiento</li>
+        <li>Dificultad para describir ubicación bajo estrés</li>
+      </ul>
 
-  </div>
+      <!-- SOLUCIÓN -->
+      <h3>Arquitectura de Transmisión Dinámica (LoRa + GPS)</h3>
+
+      <ul>
+        <li>Activación física de un solo toque con envío automático sin distracciones al conducir</li>
+        <li>Transmisión vía LoRa hacia nodo 
+          <span class="inline-sector-link product-ref"
+            data-sector="producto-advanced">Advanced</span>
+
+          más estable
+        </li>
+        <li>Envío de ubicación inicial + datos del vehículo</li>
+        <li>Actualización automática de posición cada 30 segundos</li>
+        <li>Selección automática de nuevo nodo si cambia el entorno</li>
+      </ul>
+
+      <p>
+        El dispositivo versión Móvil funciona como emisor dedicado.
+        No actúa como puente para otros dispositivos, sino que utiliza
+        la red de nodos 
+        <span class="inline-sector-link product-ref"
+          data-sector="producto-advanced">Advanced</span>
+        para procurar el envío de la información
+        hacia el Centro de Control y Monitoreo (
+        <span class="inline-sector-link product-ref" data-sector="producto-control-general">CCM</span>
+        ) configurado.
+      </p>
+
+      <!-- IMÁGENES -->
+      <div class="product-images">
+
+        <figure class="product-image">
+          <img src="img/boton-auxilio.png"
+              alt="Botón de Auxilio Móvil instalado en cabina de vehículo">
+          <figcaption>
+            Ilustración 1 - Botón de Auxilio Móvil: Diseño ergonómico para instalación en cabina o tablero.
+          </figcaption>
+        </figure>
+
+        <figure class="product-image">
+          <img src="img/Diagrama_de_Transmisión_Dinámica.png"
+              alt="Diagrama transmisión dinámica entre vehículo y nodos Advanced" class="zoom-diagram">
+          <figcaption>
+            Ilustración 2 - Diagrama de Transmisión Dinámica: Vehículo en movimiento saltando entre nodos Advanced conforme cambia su ubicación.
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <!-- FUNCIONAMIENTO -->
+      <h3>Funcionamiento en movimiento</h3>
+
+      <ul>
+        <li>Al activarse, envía ubicación inicial y ficha del vehículo</li>
+        <li>Actualización automática de posición en intervalos de 30 segundos</li>
+        <li>Si el nodo 
+          <span class="inline-sector-link product-ref"
+            data-sector="producto-advanced">Advanced</span>
+          inicial queda fuera de alcance, busca uno nuevo
+        </li>
+        <li>Reintenta transmisión ante interferencias geográficas o ambientales</li>
+      </ul>
+
+      <p>
+        En caso de cambio de jurisdicción municipal, el sistema permite
+        redirigir la información hacia la autoridad correspondiente,
+        conforme a la configuración institucional previamente establecida.
+      </p>
+
+      <!-- FICHA VEHÍCULO -->
+      <h3>Ficha Operativa de Emergencia</h3>
+
+      <ul>
+        <li>Placas registradas</li>
+        <li>Marca, Submarca y Color</li>
+        <li>Punto inicial de activación</li>
+        <li>Trayectoria actualizada durante el evento</li>
+      </ul>
+
+      <!-- DISCLAIMER LEGAL SUAVE -->
+      <div class="legal-note">
+        El dispositivo transmite información en segundos hacia la infraestructura configurada.
+        La atención, despacho y tiempos de respuesta dependen exclusivamente
+        de las autoridades o proveedores de seguridad correspondientes.
+      </div>
+
+      <!-- ONE PAGER -->
+      <div class="download-box">
+
+        <a href="pdf/One-Pager_BotonAuxilioColaborativoMovil.pdf"
+          class="download-btn"
+          target="_blank"
+          rel="noopener">
+          Descargar One-Pager – Botón de Auxilio Móvil
+        </a>
+
+        <p class="sector-note">
+          Documento técnico para integración de flotas institucionales.
+        </p>
+
+      </div>
+
+      <!-- CONTACTO -->
+      <section class="section contact-section">
+
+        <h2>Contacto institucional</h2>
+
+        <p>
+          Solicita información técnica, una demostración funcional o un piloto controlado
+          del sistema en entornos móviles.
+        </p>
+
+        <p>
+          La versión MÓVIL permite integrar unidades vehiculares a la red de auxilio colaborativa,
+          facilitando la generación y transmisión de eventos en tiempo real durante operación en campo,
+          ideal para flotas de seguridad, logística y servicios.
+        </p>
+
+        <p>
+          <strong>Correo institucional:</strong><br>
+          contacto@botonauxilio.com<br>
+          <span class="coming-soon">(Disponible próximamente)</span>
+        </p>
+
+        <!-- BOTÓN DE CONTACTO -->
+        <div class="download-box">
+          <button class="contact-open-btn">
+            Solicitar integración de flota
+          </button>
+        </div>
+
+      </section>
+    </div>  
   </div> <!-- cierre de producto-movil -->
 
   <div id="producto-control-general" class="sector-content">
@@ -1690,26 +2394,28 @@
       </p>
 
       <ul>
-        <li>Capacidad de hasta 10 canales simultáneos</li>
+        <li>Gestión Concurrente con procesamiento de hasta 10 flujos de emergencia en tiempo real</li>
         <li>Verificación automática de integridad de datos</li>
         <li>Alerta sonora ante nuevo evento</li>
-        <li>Interfaz web accesible desde laptop en la misma red</li>
+        <li>Terminal Web Responsiva con acceso multiplataforma sin instalación de software local</li>
       </ul>
 
       <!-- IMÁGENES -->
       <div class="product-images">
 
         <figure class="product-image">
-          <img src="img/boton-auxilio.png"
-              alt="Interfaz del Centro de Control y Monitoreo en laptop">
+          <img src="img/Imagen1CCM.png"
+              alt="Interfaz del Centro de Control y Monitoreo en laptop"
+              class="zoom-diagram">
           <figcaption>
             Ilustración 1 - Interfaz del CCM en Laptop: Vista de mapa y gestión de 10 canales simultáneos.
           </figcaption>
         </figure>
 
         <figure class="product-image">
-          <img src="img/receptor-institucional.png"
-              alt="Centro de Control operando desde vehículo con conexión portátil">
+          <img src="img/Imagen2CCM.png"
+              alt="Centro de Control operando desde vehículo con conexión portátil"
+              class="zoom-diagram">
           <figcaption>
             Ilustración 2 - Operación Móvil: El CCM operando desde un vehículo con conexión portátil.
           </figcaption>
@@ -1769,7 +2475,7 @@
       </div>
 
       <!-- MOVILIDAD -->
-      <h3>Movilidad Operativa</h3>
+      <h3>Despliegue Táctico y Operaciones de Campo</h3>
 
       <p>
         El CCM puede operar en sede fija o de forma móvil utilizando
@@ -1779,7 +2485,7 @@
       </p>
 
       <!-- ALERTAMIENTO SÍSMICO -->
-      <h3>Función Extendida: Difusión de Alertamiento Preventivo</h3>
+      <h3>Gateway de Alertamiento Masivo Preventivo (Opcional)</h3>
 
       <p>
         El CCM puede actuar como nodo emisor de difusión preventiva
@@ -1794,9 +2500,8 @@
 
       <div class="legal-note">
         La función de alertamiento preventivo requiere convenio con
-        proveedores legalmente facultados para la distribución de señales
-        (por ejemplo, SkyAlert). El CCM no genera ni sustituye sistemas
-        oficiales de detección sísmica.
+        proveedores legalmente facultados para la distribución de señales.
+        El CCM no genera ni sustituye sistemas oficiales de detección sísmica.
       </div>
 
       <!-- ONE PAGER -->
@@ -1816,18 +2521,31 @@
       </div>
 
       <!-- CONTACTO -->
-      <section class="contact-institutional">
+      <section class="section contact-section">
 
-        <h2>Contacto Institucional</h2>
+        <h2>Contacto institucional</h2>
 
         <p>
-          Solicita una presentación técnica o análisis de implementación
-          para tu institución.
+          Solicita una presentación técnica, demostración funcional o un piloto controlado
+          del Centro de Control y Monitoreo (CCM) en tu entorno operativo.
         </p>
 
-        <div class="center-button">
+        <p>
+          El CCM permite la visualización, gestión y seguimiento en tiempo real
+          de eventos generados por la red de dispositivos, a través de una plataforma web centralizada,
+          facilitando la toma de decisiones y la coordinación operativa en distintos niveles.
+        </p>
+
+        <p>
+          <strong>Correo institucional:</strong><br>
+          contacto@botonauxilio.com<br>
+          <span class="coming-soon">(Disponible próximamente)</span>
+        </p>
+
+        <!-- BOTÓN DE CONTACTO -->
+        <div class="download-box">
           <button class="contact-open-btn">
-            Solicitar demostración técnica
+            Solicitar demostración del sistema
           </button>
         </div>
 
@@ -1835,7 +2553,7 @@
 
     </div>
 
-  </div>
+  </div> <!-- cierre de producto-control-general -->
 
   
   <footer class="footer">

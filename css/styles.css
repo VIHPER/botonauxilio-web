@@ -254,6 +254,30 @@ ul li {
   font-style: italic;
 }
 
+/* Contenedor para evitar que el zoom mueva otros elementos */
+.product-image {
+  overflow: visible; /* Permite que la imagen sobresalga al agrandarse */
+  text-align: center;
+  margin: 20px 0;
+}
+
+.zoom-diagram {
+  width: 100%;           /* Se ajusta al ancho del contenedor original */
+  max-width: 600px;      /* Tamaño base en pantalla */
+  transition: transform 0.4s cubic-bezier(0.25, 0.45, 0.45, 0.95); /* Animación suave */
+  cursor: zoom-in;
+  border-radius: 8px;    /* Opcional: bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Efecto al pasar el mouse (Hover) */
+.zoom-diagram:hover {
+  transform: scale(1.8); /* Agrandar al 180% para leer bien los textos LoRa */
+  position: relative;
+  z-index: 100;          /* Asegura que quede por encima de todo el texto */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4); /* Sombra para dar profundidad */
+}
+
 /* BRANDING */
 .brand {
   text-align: center;
