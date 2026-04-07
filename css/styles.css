@@ -231,9 +231,11 @@ ul li {
 
 /* CONTENEDOR DE IMÁGENES DE PRODUCTO */
 .product-image {
-  max-width: 1000px;
   margin: 20px auto;
   text-align: center;
+  overflow: visible !important;
+  width: 100%;
+  display: block;
 }
 
 
@@ -289,19 +291,30 @@ ul li {
 
 /* Configuración para Celular */
 @media (max-width: 767px) {
-  /* Forzamos a la imagen a comportarse como un bloque para el scroll */
-  .zoom-diagram {
-    display: block; 
-    max-width: 100%; /* Asegura que al inicio no mida más que la pantalla */
-    height: auto;
+  
+  /* 1. Preparamos los contenedores para que no corten la imagen */
+  .product-image, 
+  .product-figure, 
+  .diagram-figure {
+    overflow: visible !important; /* Vital para que el zoom no se corte */
+    display: block;
+    width: 100%;
   }
 
-  .zoom-diagram:active, .zoom-diagram:hover {
-    /* El origen 'left top' es el más estable para activar el scroll */
-    transform-origin: left top; 
-    transform: scale(2.2); /* Aumenté un poco el scale para que el scroll sea más obvio */
+  /* 2. Configuración de la imagen */
+  .zoom-diagram {
+    display: block; 
+    max-width: 100%; 
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  /* 3. El Zoom: usamos 'left center' para que el scroll sea horizontal */
+  .zoom-diagram:active {
+    transform-origin: left center; 
+    transform: scale(2.2); 
     position: relative;
-    z-index: 100;
+    z-index: 999;
   }
 }
 
@@ -1074,6 +1087,9 @@ ul li {
 .product-figure {
   margin: 40px 0;
   text-align: center;
+  overflow: visible !important;
+  width: 100%;
+  display: block;
 }
 
 .product-image img, 
@@ -1109,6 +1125,9 @@ ul li {
 
 .diagram-figure {
   margin-top: 50px;
+  overflow: visible !important;
+  width: 100%;
+  display: block;
 }
 
 /* ========================================
