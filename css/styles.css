@@ -5,10 +5,6 @@ body {
   line-height: 1.6;
 }
 
-body, html {
-  overflow-x: hidden; 
-}
-
 /* HERO */
 .hero {
   background: #0b1f33;
@@ -293,18 +289,19 @@ ul li {
 
 /* Configuración para Celular */
 @media (max-width: 767px) {
-  /* Forzamos que la imagen no se salga antes de tocarla */
-  .product-figure, .product-image {
-    max-width: 100%;
-    overflow: visible; /* Permite que el zoom funcione */
+  /* Forzamos a la imagen a comportarse como un bloque para el scroll */
+  .zoom-diagram {
+    display: block; 
+    max-width: 100%; /* Asegura que al inicio no mida más que la pantalla */
+    height: auto;
   }
 
   .zoom-diagram:active, .zoom-diagram:hover {
-    transform: scale(1.8);
+    /* El origen 'left top' es el más estable para activar el scroll */
+    transform-origin: left top; 
+    transform: scale(2.2); /* Aumenté un poco el scale para que el scroll sea más obvio */
     position: relative;
     z-index: 100;
-    /* Al usar 'left center' evitamos que se salga por la izquierda */
-    transform-origin: left center; 
   }
 }
 
@@ -1030,6 +1027,9 @@ ul li {
 
 .product-block {
   margin-bottom: 50px;
+  width: 100%;
+  max-width: 100vw; /* Asegura que el contenedor principal no sea más ancho que la pantalla */
+  overflow-x: clip; /* Corta el desborde global pero permite el scroll interno de las figuras */
 }
 
 .product-block h3 {
