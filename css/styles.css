@@ -295,7 +295,6 @@ ul li {
   .zoom-container {
     width: 100%;
     height: auto;
-    max-height: 80vh;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     display: block;
