@@ -280,34 +280,37 @@ ul li {
 /* Configuración para Celular */
 @media (max-width: 767px) {
   
-  /* 1. Preparamos los contenedores para que no corten la imagen */
-  .product-figure, 
-  .diagram-figure {
-    overflow: visible !important; /* Vital para que el zoom no se corte */
+  /* 1. El contenedor padre debe permitir el scroll horizontal */
+  .product-image {
+    overflow-x: auto !important; /* Permite scroll horizontal */
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch; /* Suavidad en iPhone/iPad */
     display: block;
     width: 100%;
+    text-align: left; /* Alineamos a la izquierda para que el zoom tenga espacio */
   }
 
-  /* 2. Configuración de la imagen */
+  /* 2. La imagen */
   .zoom-diagram {
     display: block; 
     max-width: 100%; 
     height: auto;
     transition: transform 0.3s ease;
+    cursor: zoom-in;
   }
 
-  /* 3. El Zoom: usamos 'left center' para que el scroll sea horizontal */
+  /* 3. El Efecto de Zoom al tocar (active) */
   .zoom-diagram:active {
-    transform-origin: left center; 
-    transform: scale(2.2); 
-    position: relative;
-    z-index: 999;
+    /* Quitamos transform-origin left para que no se pegue al borde */
+    transform-origin: center center; 
+    /* El truco: al escalar, el contenedor con overflow-x: auto permitirá el scroll */
+    transform: scale(2.5); 
+    margin: 50% 0; /* Añade margen vertical para que el zoom no choque con el texto */
   }
 
-  /* 4. Evita que el contenido empuje la pantalla hacia la derecha en móviles */
-  .sector-content {
+  /* 4. Aseguramos que el cuerpo de la página no se mueva, solo el contenedor de la imagen */
+  body {
     overflow-x: hidden;
-    width: 100%;
   }
 }
 
