@@ -237,7 +237,7 @@ ul li {
 .product-image {
   margin: 20px auto;
   text-align: center;
-  overflow: visible !important;
+  overflow: hidden;
   max-width: 100%;
   display: block;
 }
@@ -1088,7 +1088,7 @@ ul li {
 
 .product-image img, 
 .product-figure img {
-  max-width: 100%;       /* Ocupa el ancho de la pantalla en celular */
+  width: 100%;       /* Ocupa el ancho de la pantalla en celular */
   max-width: 500px;   /* Pero no más de 500px en laptop */
   height: auto;
   border-radius: 6px;
@@ -1100,6 +1100,7 @@ ul li {
 .product-image-main {
   max-width: 420px;
   width: 100%;
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
