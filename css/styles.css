@@ -275,31 +275,32 @@ ul li {
 
 /* Configuración para Celular */
 @media (max-width: 767px) {
-  
-  /* 1. Preparamos los contenedores para que no corten la imagen */
-  .product-figure, 
-  .diagram-figure {
-    overflow: visible !important; /* Vital para que el zoom no se corte */
-    display: block;
+  /* Aplicamos la misma lógica que tu tabla */
+  .product-image {
     width: 100%;
+    overflow-x: auto !important; /* Habilita el scroll horizontal */
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch; /* Suavidad táctil */
+    display: block;
+    margin: 20px 0;
   }
 
-  /* 2. Configuración de la imagen */
+  /* La imagen dentro del contenedor */
   .zoom-diagram {
-    display: block; 
-    max-width: 100%; 
+    display: block;
+    width: 100%; /* Inicia al ancho de la pantalla */
     height: auto;
-    transition: transform 0.3s ease;
+    transition: width 0.3s ease-in-out; /* La transición es sobre el ANCHO real */
+    cursor: zoom-in;
   }
 
-  /* 3. El Zoom: usamos 'left center' para que el scroll sea horizontal */
+  /* El efecto al tocar: La imagen CRECE físicamente */
   .zoom-diagram:active {
-    transform-origin: left center; 
-    transform: scale(2.2); 
-    position: relative;
-    z-index: 999;
+    width: 250%; /* Al crecer a 250%, obliga al contenedor a mostrar el scroll */
+    max-width: none !important; /* Eliminamos cualquier restricción de la laptop */
   }
 }
+
 
 /* BRANDING */
 .brand {
