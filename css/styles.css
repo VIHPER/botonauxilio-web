@@ -299,7 +299,6 @@ ul li {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     display: block;
-    position: relative;
   }
 
   /* IMAGEN NORMAL */
