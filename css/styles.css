@@ -288,7 +288,7 @@ ul li {
     text-align: center;
     -webkit-overflow-scrolling: touch;
     border: 1px solid #eee; /* Opcional: para ver los límites del contenedor */
-    margin: 20px 0;
+    /*margin: 20px 0;*/
   }
 
   /* La imagen dentro del contenedor */
