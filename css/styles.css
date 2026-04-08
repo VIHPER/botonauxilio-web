@@ -288,20 +288,22 @@ ul li {
     text-align: center;
     -webkit-overflow-scrolling: touch;
     border: 1px solid #eee; /* Opcional: para ver los límites del contenedor */
+    margin: 20px 0;
   }
 
-  /* 2. La imagen: Quitamos el transform y usamos width */
+  /* La imagen dentro del contenedor */
   .zoom-diagram {
-    display: inline-block; /* Importante para que el scroll funcione mejor */
+    display: block; /* Importante para que el scroll funcione mejor */
     width: 100%; /* Tamaño inicial normal */
     height: auto;
     transition: width 0.3s ease; /* La transición ahora es sobre el ancho */
+    cursor: zoom-in;
   }
 
   /* 3. El Zoom: Cambiamos el ancho físico de la imagen */
   .zoom-diagram:active {
     width: 250%; /* La imagen ahora físicamente mide 2.5 veces la pantalla */
-    max-width: none; /* Quitamos cualquier restricción previa */
+    max-width: none !important; /* Quitamos cualquier restricción previa */
     cursor: move;
   }
 
