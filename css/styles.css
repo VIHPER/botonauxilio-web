@@ -294,8 +294,9 @@ ul li {
   /* CONTENEDOR SCROLLABLE */
   .zoom-container {
     width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
+    height: auto;
+    max-height: 80vh;
+    overflow: auto;
     -webkit-overflow-scrolling: touch;
     display: block;
   }
@@ -306,7 +307,7 @@ ul li {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
-    transform-origin: left center; /* clave para scroll natural */
+    transform-origin: top left; /* clave para scroll natural */
   }
 
   /* ESTADO ZOOM */
