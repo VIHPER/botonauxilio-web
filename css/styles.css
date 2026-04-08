@@ -279,38 +279,36 @@ ul li {
 
 /* Configuración para Celular */
 @media (max-width: 767px) {
-  
-  /* 1. El contenedor padre debe permitir el scroll horizontal */
+  /* 1. El contenedor ahora SI detectará el desbordamiento real */
   .product-image {
-    overflow-x: auto !important; /* Permite scroll horizontal */
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch; /* Suavidad en iPhone/iPad */
-    display: block;
     width: 100%;
-    text-align: left; /* Alineamos a la izquierda para que el zoom tenga espacio */
+    overflow-x: auto !important; 
+    overflow-y: hidden;
+    display: block;
+    text-align: center;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid #eee; /* Opcional: para ver los límites del contenedor */
   }
 
-  /* 2. La imagen */
+  /* 2. La imagen: Quitamos el transform y usamos width */
   .zoom-diagram {
-    display: block; 
-    max-width: 100%; 
+    display: inline-block; /* Importante para que el scroll funcione mejor */
+    width: 100%; /* Tamaño inicial normal */
     height: auto;
-    transition: transform 0.3s ease;
-    cursor: zoom-in;
+    transition: width 0.3s ease; /* La transición ahora es sobre el ancho */
   }
 
-  /* 3. El Efecto de Zoom al tocar (active) */
+  /* 3. El Zoom: Cambiamos el ancho físico de la imagen */
   .zoom-diagram:active {
-    /* Quitamos transform-origin left para que no se pegue al borde */
-    transform-origin: center center; 
-    /* El truco: al escalar, el contenedor con overflow-x: auto permitirá el scroll */
-    transform: scale(2.5); 
-    margin: 50% 0; /* Añade margen vertical para que el zoom no choque con el texto */
+    width: 250%; /* La imagen ahora físicamente mide 2.5 veces la pantalla */
+    max-width: none; /* Quitamos cualquier restricción previa */
+    cursor: move;
   }
 
-  /* 4. Aseguramos que el cuerpo de la página no se mueva, solo el contenedor de la imagen */
+  /* 4. Limpieza para evitar que toda la página baile */
   body {
     overflow-x: hidden;
+    position: relative;
   }
 }
 
