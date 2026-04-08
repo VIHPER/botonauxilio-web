@@ -288,23 +288,31 @@ ul li {
     text-align: center;
     -webkit-overflow-scrolling: touch;
     border: 1px solid #eee; /* Opcional: para ver los límites del contenedor */
-    /*margin: 20px 0;*/
+    margin: 20px 0;
   }
 
-  /* La imagen dentro del contenedor */
+  /* CONTENEDOR SCROLLABLE */
+  .zoom-container {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+  }
+
+  /* IMAGEN NORMAL */
   .zoom-diagram {
-    display: block; /* Importante para que el scroll funcione mejor */
-    width: 100%; /* Tamaño inicial normal */
+    display: block;
+    width: 100%;
     height: auto;
-    transition: width 0.3s ease; /* La transición ahora es sobre el ancho */
-    cursor: zoom-in;
+    transition: transform 0.3s ease;
+    transform-origin: left center; /* clave para scroll natural */
   }
 
-  /* 3. El Zoom: Cambiamos el ancho físico de la imagen */
-  .zoom-diagram:active {
-    width: 250%; /* La imagen ahora físicamente mide 2.5 veces la pantalla */
-    max-width: none !important; /* Quitamos cualquier restricción previa */
-    cursor: move;
+  /* ESTADO ZOOM */
+  .zoom-diagram.zoomed {
+    transform: scale(2.5);
+    cursor: grab;
   }
 
   /* 4. Limpieza para evitar que toda la página baile */
