@@ -85,6 +85,7 @@ h3 {
 /* TABLA */
 .comparison-table {
   width: 100%;
+  min-width: 600px;
   border-collapse: collapse;
 }
 
@@ -121,6 +122,7 @@ ul li {
   gap: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .timer-card {
@@ -275,14 +277,22 @@ ul li {
 
 /* Configuración para Celular */
 @media (max-width: 767px) {
+  /* Evita que el contenido empuje la pantalla hacia la derecha en móviles */
+  .sector-content {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
   /* Aplicamos la misma lógica que tu tabla */
   .product-image {
+    max-width: 100%;
     width: 100%;
     overflow-x: auto !important; /* Habilita el scroll horizontal */
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch; /* Suavidad táctil */
     display: block;
-    margin: 20px 0;
+    margin: 20px auto;
+    text-align: center;
   }
 
   /* La imagen dentro del contenedor */
@@ -334,6 +344,7 @@ ul li {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  margin: 20px 0;
 }
 
 .highlight-col {
@@ -1079,7 +1090,7 @@ ul li {
 .product-image img, 
 .product-figure img {
   width: 100%;       /* Ocupa el ancho de la pantalla en celular */
-  max-width: 500px;   /* Pero no más de 500px en laptop */
+  max-width: 500px;
   height: auto;
   border-radius: 6px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
