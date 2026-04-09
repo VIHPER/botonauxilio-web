@@ -279,7 +279,7 @@ ul li {
 @media (max-width: 767px) {
   /* Evita que el contenido empuje la pantalla hacia la derecha en móviles */
   .sector-content {
-    overflow-x: visible;
+    overflow-x: hidden;
     width: 100%;
   }
 
@@ -297,25 +297,19 @@ ul li {
 
   .zoom-container {
     width: 100%;
-    max-width: 100%;
-    height: auto;
-    max-height: 80vh; /* evita que rompa toda la pantalla */
     overflow: auto; /* permite scroll en ambos ejes */
     -webkit-overflow-scrolling: touch;
     position: relative;
     touch-action: pan-x pan-y; /* permite scroll libre */
-    overscroll-behavior: contain;
-    contain: layout paint;
   }
 
   /* La imagen dentro del contenedor */
   .zoom-diagram {
     display: block;
     width: 100%;
-    min-width: 100%;
     height: auto;
     cursor: zoom-in;
-    will-change: transform;
+
     transform-origin: top left; /* 🔥 punto de origen correcto */
     transform: scale(1);
 
@@ -325,7 +319,6 @@ ul li {
   /* El efecto al tocar: La imagen CRECE físicamente */
   .zoom-diagram.zoomed {
     transform: scale(2.5);
-    transform-origin: top left;
     cursor: zoom-out;
   }
 }
