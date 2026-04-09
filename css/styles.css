@@ -295,12 +295,21 @@ ul li {
     text-align: center;
   }
 
+  .zoom-container {
+    width: 100%;
+    overflow: auto; /* permite scroll en ambos ejes */
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+  }
+
   /* La imagen dentro del contenedor */
   .zoom-diagram {
     display: block;
     width: 100%; /* Inicia al ancho de la pantalla */
     height: auto;
-    transition: width 0.3s ease-in-out; /* La transición es sobre el ANCHO real */
+    transition: transform 0.25s ease;
+    transform-origin: top left;
+    /*transition: width 0.3s ease-in-out; /* La transición es sobre el ANCHO real */
     cursor: zoom-in;
   }
 
