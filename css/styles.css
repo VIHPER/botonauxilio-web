@@ -305,15 +305,17 @@ ul li {
     position: relative;
     touch-action: pan-x pan-y; /* permite scroll libre */
     overscroll-behavior: contain;
+    contain: layout paint;
   }
 
   /* La imagen dentro del contenedor */
   .zoom-diagram {
     display: block;
     width: 100%;
+    min-width: 100%;
     height: auto;
     cursor: zoom-in;
-
+    will-change: transform;
     transform-origin: top left; /* 🔥 punto de origen correcto */
     transform: scale(1);
 
@@ -325,8 +327,6 @@ ul li {
     transform: scale(2.5);
     transform-origin: top left;
     cursor: zoom-out;
-    width: 250%;
-    max-width: none;
   }
 }
 
