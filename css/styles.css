@@ -279,7 +279,7 @@ ul li {
 @media (max-width: 767px) {
   /* Evita que el contenido empuje la pantalla hacia la derecha en móviles */
   .sector-content {
-    overflow-x: hidden;
+    overflow-x: visible;
     width: 100%;
   }
 
