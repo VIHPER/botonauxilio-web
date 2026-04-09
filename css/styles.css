@@ -300,23 +300,26 @@ ul li {
     overflow: auto; /* permite scroll en ambos ejes */
     -webkit-overflow-scrolling: touch;
     position: relative;
+    touch-action: pan-x pan-y; /* permite scroll libre */
   }
 
   /* La imagen dentro del contenedor */
   .zoom-diagram {
     display: block;
-    width: 100%; /* Inicia al ancho de la pantalla */
+    width: 100%;
     height: auto;
-    transition: transform 0.25s ease;
-    transform-origin: top left;
-    /*transition: width 0.3s ease-in-out; /* La transición es sobre el ANCHO real */
     cursor: zoom-in;
+
+    transform-origin: top left; /* 🔥 punto de origen correcto */
+    transform: scale(1);
+
+    transition: transform 0.25s ease;
   }
 
   /* El efecto al tocar: La imagen CRECE físicamente */
-  .zoom-diagram:active {
-    width: 250%; /* Al crecer a 250%, obliga al contenedor a mostrar el scroll */
-    max-width: none !important; /* Eliminamos cualquier restricción de la laptop */
+  .zoom-diagram.zoomed {
+    transform: scale(2.5);
+    cursor: zoom-out;
   }
 }
 
