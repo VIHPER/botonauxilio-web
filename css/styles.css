@@ -3,7 +3,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: #222;
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
 /* HERO */
@@ -280,7 +279,8 @@ ul li {
 @media (max-width: 767px) {
   /* Evita que el contenido empuje la pantalla hacia la derecha en móviles */
   .sector-content {
-    overflow-x: visible;
+    overflow-x: hidden;
+    width: 100%;
   }
 
   /* Aplicamos la misma lógica que tu tabla */
@@ -297,12 +297,10 @@ ul li {
 
   .zoom-container {
     width: 100%;
-    max-width: 100%;
     overflow: auto; /* permite scroll en ambos ejes */
     -webkit-overflow-scrolling: touch;
     position: relative;
     touch-action: pan-x pan-y; /* permite scroll libre */
-    contain: layout paint size;
   }
 
   /* La imagen dentro del contenedor */
@@ -320,34 +318,8 @@ ul li {
 
   /* El efecto al tocar: La imagen CRECE físicamente */
   .zoom-diagram.zoomed {
-    transform: none;
-  }
-  /* =========================
-     ZOOM FULLSCREEN (MOBILE)
-  ========================= */
-
-  .zoom-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.95);
-    z-index: 9999;
-
-    display: none;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .zoom-overlay.active {
-    display: block;
-  }
-
-  .zoom-overlay img {
-    display: block;
-    max-width: none;
-    width: auto;
-    height: auto;
-
-    transform-origin: top left;
+    transform: scale(2.5);
+    cursor: zoom-out;
   }
 }
 
