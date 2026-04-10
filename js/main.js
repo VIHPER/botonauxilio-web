@@ -251,43 +251,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  /* ===============================
-    ZOOM FULLSCREEN (SOLO MOBILE)
-  =============================== */
+  // Lógica para rotación de imagen en dispositivos móviles
+  const zoomDiagram = document.querySelector('.zoom-diagram');
 
-  if (window.innerWidth <= 767) {
-
-    const images = document.querySelectorAll(".zoom-diagram");
-
-    // Crear overlay dinámicamente
-    const overlay = document.createElement("div");
-    overlay.classList.add("zoom-overlay");
-
-    const overlayImg = document.createElement("img");
-    overlay.appendChild(overlayImg);
-
-    document.body.appendChild(overlay);
-
-    // Evento click en imagen
-    images.forEach(img => {
-      img.addEventListener("click", () => {
-
-        overlayImg.src = img.src;
-
-        overlay.classList.add("active");
-
-        // Reset scroll
-        overlay.scrollTop = 0;
-        overlay.scrollLeft = 0;
-
-      });
+  if (zoomDiagram) {
+    zoomDiagram.addEventListener('click', function() {
+      // Solo actuar si estamos en resolución de celular
+      if (window.innerWidth <= 767) {
+        this.classList.toggle('rotated');
+        
+        // Bloquear o desbloquear el scroll del resto de la página
+        if (this.classList.contains('rotated')) {
+          document.body.classList.add('no-scroll');
+        } else {
+          document.body.classList.remove('no-scroll');
+        }
+      }
     });
-
-    // Cerrar overlay
-    overlay.addEventListener("click", () => {
-      overlay.classList.remove("active");
-    });
-
   }
 
 });
