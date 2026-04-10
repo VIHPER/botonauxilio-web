@@ -327,8 +327,8 @@ ul li {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 100vh; /* El ancho de la imagen será el alto de la pantalla */
-    height: 100vw; /* El alto de la imagen será el ancho de la pantalla */
+    width: 100dvh; /* El ancho de la imagen será el alto de la pantalla */
+    height: 100dvw; /* El alto de la imagen será el ancho de la pantalla */
     object-fit: contain;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.95); /* Fondo oscuro para resaltar */
@@ -336,6 +336,7 @@ ul li {
     cursor: zoom-out;
     padding: 10px;
     box-sizing: border-box;
+    touch-action: none; /* evita conflictos táctiles */
   }
 
   /* Desactivar el scroll del cuerpo cuando la imagen está rotada */
