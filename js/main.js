@@ -252,26 +252,44 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Lógica para rotación de imagen en dispositivos móviles
-  const zoomDiagram = document.querySelector('.zoom-diagram');
+ const zoomDiagram = document.querySelector('.zoom-diagram');
+  const overlay = document.querySelector('.zoom-overlay');
 
-  if (zoomDiagram) {
+  if (zoomDiagram && overlay) {
+
+    // ABRIR / CERRAR desde la imagen
     zoomDiagram.addEventListener('click', function(e) {
       if (window.innerWidth <= 767) {
 
-        // 🔥 PRIORIDAD: si está rotada → RESET COMPLETO
-        if (this.classList.contains('rotated')) {
-          this.classList.remove('rotated');
-          this.classList.remove('zoomed'); // 🔥 clave
-          document.body.classList.remove('no-scroll');
-          return;
+        if (!this.classList.contains('rotated')) {
+          // ABRIR
+          this.classList.add('rotated');
+          overlay.classList.add('active');
+          document.body.classList.add('no-scroll');
+        } else {
+          // CERRAR
+          closeImage();
         }
 
-        // 🔥 Si no está rotada, activar rotación
-        this.classList.add('rotated');
-        this.classList.remove('zoomed'); // 🔥 asegurar estado limpio
-        document.body.classList.add('no-scroll');
+        e.stopPropagation(); // 🔥 evita conflictos con overlay
       }
     });
+
+    // CERRAR tocando fuera
+    overlay.addEventListener('click', function() {
+      closeImage();
+    });
+
+    function closeImage() {
+      zoomDiagram.classList.remove('rotated');
+      overlay.classList.remove('active');
+      document.body.classList.remove('no-scroll');
+
+      // 🔥 Fuerza re-render (soluciona desaparición)
+      zoomDiagram.style.display = 'none';
+      zoomDiagram.offsetHeight; 
+      zoomDiagram.style.display = '';
+    }
   }
 
 });
