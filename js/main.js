@@ -251,4 +251,43 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  /* ===============================
+    ZOOM FULLSCREEN (SOLO MOBILE)
+  =============================== */
+
+  if (window.innerWidth <= 767) {
+
+    const images = document.querySelectorAll(".zoom-diagram");
+
+    // Crear overlay dinámicamente
+    const overlay = document.createElement("div");
+    overlay.classList.add("zoom-overlay");
+
+    const overlayImg = document.createElement("img");
+    overlay.appendChild(overlayImg);
+
+    document.body.appendChild(overlay);
+
+    // Evento click en imagen
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+
+        overlayImg.src = img.src;
+
+        overlay.classList.add("active");
+
+        // Reset scroll
+        overlay.scrollTop = 0;
+        overlay.scrollLeft = 0;
+
+      });
+    });
+
+    // Cerrar overlay
+    overlay.addEventListener("click", () => {
+      overlay.classList.remove("active");
+    });
+
+  }
+
 });

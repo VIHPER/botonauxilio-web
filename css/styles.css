@@ -320,8 +320,34 @@ ul li {
 
   /* El efecto al tocar: La imagen CRECE físicamente */
   .zoom-diagram.zoomed {
-    transform: scale(2.5);
-    cursor: zoom-out;
+    transform: none;
+  }
+  /* =========================
+     ZOOM FULLSCREEN (MOBILE)
+  ========================= */
+
+  .zoom-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.95);
+    z-index: 9999;
+
+    display: none;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .zoom-overlay.active {
+    display: block;
+  }
+
+  .zoom-overlay img {
+    display: block;
+    max-width: none;
+    width: auto;
+    height: auto;
+
+    transform-origin: top left;
   }
 }
 
