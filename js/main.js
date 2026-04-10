@@ -255,17 +255,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const zoomDiagram = document.querySelector('.zoom-diagram');
 
   if (zoomDiagram) {
-    zoomDiagram.addEventListener('click', function() {
-      // Solo actuar si estamos en resolución de celular
+    zoomDiagram.addEventListener('click', function(e) {
       if (window.innerWidth <= 767) {
-        this.classList.toggle('rotated');
-        
-        // Bloquear o desbloquear el scroll del resto de la página
+
+        // 🔥 PRIORIDAD: si está rotada → RESET COMPLETO
         if (this.classList.contains('rotated')) {
-          document.body.classList.add('no-scroll');
-        } else {
+          this.classList.remove('rotated');
+          this.classList.remove('zoomed'); // 🔥 clave
           document.body.classList.remove('no-scroll');
+          return;
         }
+
+        // 🔥 Si no está rotada, activar rotación
+        this.classList.add('rotated');
+        this.classList.remove('zoomed'); // 🔥 asegurar estado limpio
+        document.body.classList.add('no-scroll');
       }
     });
   }

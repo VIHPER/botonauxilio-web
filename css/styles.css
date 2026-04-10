@@ -317,11 +317,11 @@ ul li {
   }
 
   /* El efecto al tocar: La imagen CRECE físicamente */
-  /*.zoom-diagram.zoomed {
+  .zoom-diagram.zoomed {
     transform: scale(2.5);
     cursor: zoom-out;
-    
-    }*/
+  }
+
   /* Clase para rotar y expandir la imagen */
   .zoom-diagram.rotated {
     position: fixed;
@@ -332,9 +332,9 @@ ul li {
     object-fit: contain;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.95); /* Fondo oscuro para resaltar */
-    transform: translate(-50%, -50%) rotate(90deg);
-    cursor: zoom-out;
+    transform: translate(-50%, -50%) rotate(90deg) scale(1);
     padding: 10px;
+    cursor: zoom-out;
     box-sizing: border-box;
   }
 
