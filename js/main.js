@@ -281,15 +281,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function closeImage() {
+      // 🔥 LIMPIEZA COMPLETA DE ESTADOS
       zoomDiagram.classList.remove('rotated');
+      zoomDiagram.classList.remove('zoomed'); // ✅ FIX PRINCIPAL
+
       overlay.classList.remove('active');
       document.body.classList.remove('no-scroll');
 
-      // 🔥 Fuerza re-render (soluciona desaparición)
+      // 🔥 Reset inline styles si existieran
+      zoomDiagram.style.transform = '';
       zoomDiagram.style.display = 'none';
       zoomDiagram.offsetHeight; 
       zoomDiagram.style.display = '';
     }
   }
+  
+});
 
+zoomDiagram.addEventListener('click', function(e) {
+  if (window.innerWidth <= 767) {
+
+    // 🚫 NO permitir zoom si está en modo rotado
+    if (this.classList.contains('rotated')) {
+      closeImage();
+      e.stopPropagation();
+      return;
+    }
+
+    if (!this.classList.contains('rotated')) {
+      // ABRIR
+      this.classList.add('rotated');
+      overlay.classList.add('active');
+      document.body.classList.add('no-scroll');
+    }
+
+    e.stopPropagation();
+  }
 });
