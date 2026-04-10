@@ -252,7 +252,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Lógica para rotación de imagen en dispositivos móviles
-  const zoomDiagram = document.querySelector('.zoom-diagram');
+ const zoomDiagram = document.querySelector('.zoom-diagram');
   const overlay = document.querySelector('.zoom-overlay');
 
   if (zoomDiagram && overlay) {
@@ -292,34 +292,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Detectar rotación o cambio de tamaño
-  window.addEventListener('resize', handleOrientationChange);
-  window.addEventListener('orientationchange', handleOrientationChange);
-
-  function handleOrientationChange() {
-    if (zoomDiagram.classList.contains('rotated')) {
-      // Recalcular layout correctamente
-      fixRotatedImage();
-    }
-  }
-
-  function fixRotatedImage() {
-    // Paso 1: quitar temporalmente la clase
-    zoomDiagram.classList.remove('rotated');
-
-    // Paso 2: forzar reflow limpio
-    zoomDiagram.style.display = 'none';
-    zoomDiagram.offsetHeight;
-    zoomDiagram.style.display = '';
-
-    // Paso 3: volver a aplicar la clase
-    zoomDiagram.classList.add('rotated');
-  }
-
-});
-
-document.addEventListener('visibilitychange', () => {
-  if (document.hidden && zoomDiagram.classList.contains('rotated')) {
-    fixRotatedImage();
-  }
 });
