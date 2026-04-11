@@ -252,7 +252,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Lógica para rotación de imagen en dispositivos móviles
- const zoomDiagram = document.querySelector('.zoom-diagram');
+  const zoomDiagram = document.querySelector('.zoom-diagram');
   const overlay = document.querySelector('.zoom-overlay');
 
   if (zoomDiagram && overlay) {
