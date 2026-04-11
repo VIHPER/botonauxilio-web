@@ -281,14 +281,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function closeImage() {
+
+      // 🔥 1. Limpiar estados de clases
       zoomDiagram.classList.remove('rotated');
+      zoomDiagram.classList.remove('zoomed'); // (por si existe)
+
       overlay.classList.remove('active');
       document.body.classList.remove('no-scroll');
 
-      // 🔥 Fuerza re-render (soluciona desaparición)
+      // 🔥 2. Reset visual FORZADO (clave)
+      zoomDiagram.style.transform = '';
+      zoomDiagram.style.transition = 'none'; // evita animación rara
+
+      // 🔥 3. Forzar reflow
       zoomDiagram.style.display = 'none';
-      zoomDiagram.offsetHeight; 
+      zoomDiagram.offsetHeight;
+
+      // 🔥 4. Restaurar estado normal
       zoomDiagram.style.display = '';
+      zoomDiagram.style.transition = ''; // vuelve a animaciones normales
     }
   }
 
