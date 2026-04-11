@@ -252,7 +252,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Lógica para rotación de imagen en dispositivos móviles
-  const zoomDiagram = document.querySelector('.zoom-diagram');
+ const zoomDiagram = document.querySelector('.zoom-diagram');
   const overlay = document.querySelector('.zoom-overlay');
 
   if (zoomDiagram && overlay) {
@@ -281,25 +281,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function closeImage() {
-
-      // 🔥 1. Limpiar estados de clases
       zoomDiagram.classList.remove('rotated');
-      zoomDiagram.classList.remove('zoomed'); // (por si existe)
-
       overlay.classList.remove('active');
       document.body.classList.remove('no-scroll');
 
-      // 🔥 2. Reset visual FORZADO (clave)
-      zoomDiagram.style.transform = '';
-      zoomDiagram.style.transition = 'none'; // evita animación rara
-
-      // 🔥 3. Forzar reflow
+      // 🔥 Fuerza re-render (soluciona desaparición)
       zoomDiagram.style.display = 'none';
-      zoomDiagram.offsetHeight;
-
-      // 🔥 4. Restaurar estado normal
+      zoomDiagram.offsetHeight; 
       zoomDiagram.style.display = '';
-      zoomDiagram.style.transition = ''; // vuelve a animaciones normales
     }
   }
 
