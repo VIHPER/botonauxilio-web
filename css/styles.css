@@ -256,7 +256,7 @@ ul li {
 }
 
 .zoom-diagram:hover {
-  transform: scale(1.8);
+  transform: scale(1);
   position: relative;
   z-index: 100;
   box-shadow: 0 15px 35px rgba(0,0,0,0.4);
@@ -267,7 +267,7 @@ ul li {
 /* Configuración para Laptop */
 @media (min-width: 768px) {
   .zoom-diagram:hover {
-    transform: scale(1.8);
+    transform: scale(2);
     position: relative;
     z-index: 100;
     box-shadow: 0 15px 35px rgba(0,0,0,0.4);
