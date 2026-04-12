@@ -251,40 +251,41 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Lógica para rotación de imagen en dispositivos móviles
- const zoomDiagram = document.querySelector('.zoom-diagram');
+  // Lógica para rotación de imágenes en dispositivos móviles (Múltiples imágenes)
+  const zoomDiagrams = document.querySelectorAll('.zoom-diagram');
   const overlay = document.querySelector('.zoom-overlay');
 
-  if (zoomDiagram && overlay) {
+  if (zoomDiagrams.length > 0 && overlay) {
 
-    // ABRIR / CERRAR desde la imagen
-    zoomDiagram.addEventListener('click', function(e) {
-      if (window.innerWidth <= 767) {
-
-        if (!this.classList.contains('rotated')) {
-          // ABRIR
-          this.classList.add('rotated');
-          overlay.classList.add('active');
-          document.body.classList.add('no-scroll');
-        } else {
-          // CERRAR
-          closeImage();
+    zoomDiagrams.forEach(function(diagram) {
+      // ABRIR / CERRAR desde cada imagen individual
+      diagram.addEventListener('click', function(e) {
+        if (window.innerWidth <= 767) {
+          if (!this.classList.contains('rotated')) {
+            // ABRIR
+            this.classList.add('rotated');
+            overlay.classList.add('active');
+            document.body.classList.add('no-scroll');
+          } else {
+            // CERRAR
+            closeImage();
+          }
+          e.stopPropagation();
         }
-
-        e.stopPropagation(); // 🔥 evita conflictos con overlay
-      }
+      });
     });
 
-    // CERRAR tocando fuera
+    // CERRAR tocando fuera (en el fondo oscuro)
     overlay.addEventListener('click', function() {
       closeImage();
     });
 
     function closeImage() {
-      zoomDiagram.classList.remove('rotated');
+      // Quitamos la clase 'rotated' de CUALQUIER imagen que la tenga
+      zoomDiagrams.forEach(img => img.classList.remove('rotated'));
       overlay.classList.remove('active');
       document.body.classList.remove('no-scroll');
-
+   
       // 🔥 Fuerza re-render (soluciona desaparición)
       zoomDiagram.style.display = 'none';
       zoomDiagram.offsetHeight; 
