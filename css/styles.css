@@ -331,15 +331,11 @@ ul li {
     height: 100vw; /* El alto de la imagen será el ancho de la pantalla */
     object-fit: contain;
     z-index: 9999;
-    background-color: transparent !important
-    /*background-color: rgba(0, 0, 0, 0.95); /* Fondo oscuro para resaltar */
+    background-color: rgba(0, 0, 0, 0.95); /* Fondo oscuro para resaltar */
     transform: translate(-50%, -50%) rotate(90deg) scale(1);
     cursor: zoom-out;
-    padding: 0px;
+    padding: 10px;
     box-sizing: border-box;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    border: none !important;
   }
 
   /* Desactivar el scroll del cuerpo cuando la imagen está rotada */
