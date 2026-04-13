@@ -1140,8 +1140,6 @@ ul li {
   width: 100%;       /* Ocupa el ancho de la pantalla en celular */
   max-width: 500px;
   height: auto;
-  border-radius: 6px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
   display: block;     /* Evita espacios en blanco extraños */
   margin: 0 auto;    /* Centra la imagen */
 }
