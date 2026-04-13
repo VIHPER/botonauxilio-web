@@ -224,7 +224,7 @@ ul li {
 
 .product-images img {
   max-width: 280px;
-  border: 1px solid #ccc;
+  /*border: 1px solid #ccc;*/
   padding: 8px;
   background: white;
   /*border-radius: 4px;
