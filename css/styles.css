@@ -1319,3 +1319,169 @@ ul li {
   visibility:visible;
   opacity:1;
 }
+
+/* Estenedor de la tarjeta de video */
+.video-card {
+  background: white;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Contenedor relativo para la imagen y el botón de play */
+.image-container {
+  position: relative;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.video-thumb {
+  width: 100%;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+/* Botón de Play centrado */
+.play-button {
+  position: absolute;
+  background: rgba(11, 31, 51, 0.8); /* El azul oscuro de tu marca */
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.play-button svg {
+  width: 40px;
+  height: 40px;
+}
+
+/* Efectos al pasar el mouse (Hover) */
+.image-container:hover {
+  transform: scale(1.01); /* Pequeño zoom */
+}
+
+.image-container:hover .video-thumb {
+  filter: brightness(0.8); /* Oscurece la imagen para resaltar el play */
+}
+
+.image-container:hover .play-button {
+  background: #0b1f33; /* Color sólido al hover */
+  transform: scale(1.1);
+}
+
+/* Contenedor de la tarjeta */
+.video-card {
+  background: white;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 280px; 
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Contenedor de la imagen y el play */
+.image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.video-thumb {
+  width: 100%;
+  display: block;
+  filter: brightness(0.9); /* Un poco más oscuro para resaltar el play */
+}
+
+.play-button {
+  position: absolute;
+  background: rgba(11, 31, 51, 0.85); /* Tu azul corporativo */
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.play-button svg {
+  width: 30px; /* Tamaño ajustado para tarjeta pequeña */
+  height: 30px;
+}
+
+/* Efecto visual al pasar el mouse */
+.video-link-container:hover .image-container {
+  transform: scale(1.03);
+}
+
+.video-link-container:hover .video-thumb {
+  filter: brightness(1);
+}
+
+.video-caption {
+  margin-top: 12px;
+  font-size: 0.8rem; /* Un poco más grande para ser el llamado principal */
+  color: #0b1f33; /* Usamos tu azul para invitar al click */
+  font-weight: 600;
+}
+
+/* Contenedor para alinear botones */
+.contact-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap; /* Para que en móvil se pongan uno sobre otro */
+  margin-top: 20px;
+}
+
+/* Estilo del botón de WhatsApp */
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.whatsapp-btn:hover {
+  background-color: #128C7E;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.whatsapp-btn svg {
+  fill: currentColor;
+}
+
+/* Ajuste para que tu botón original y el de WhatsApp tengan el mismo tamaño visual */
+.contact-open-btn, .whatsapp-btn {
+  min-width: 200px;
+  justify-content: center;
+}
